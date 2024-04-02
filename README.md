@@ -1,2 +1,2 @@
-# London SDE / AIC Centre
+# London SDE / AI Centre
 Collaborative planning and ideation
