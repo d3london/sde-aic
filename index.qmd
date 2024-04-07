@@ -20,7 +20,8 @@ The SDE is presently led by **OneLondon**, as part of an overarching London Heal
 (2) **DiscoverNOW Research/Analytics Environment**: run by Imperial College Healthcare Partners, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.
 
 (3) **London AI Centre (AIC)**: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment, federated analytics, and deployment of machine learning tools, as well as expertise in health data and advanced analytics.
-
+</br>
+</br>
 ```{mermaid}
 %%| label: fig-sde-summary
 %%| fig-cap: "Summary of SDE components and data flows. Each London ICB is provisioned with its own data/analytics environment through the LDS. FLIP = Federated Learning and Interoperability Platform."
@@ -35,25 +36,26 @@ flowchart TD
     LDS1 ==>|Linked data| ICB[(Integrated Care Board Sandpits x5)]
 
     ICB <==>|Collaborative analytics| AIC3[AIC Data/AI Hub]
-    ICB <==>|Output Sharing| LDS2[Terminology/Code/Model sharing]
+    ICB <==>|Output Sharing| LDS2[Terminology/Code/Model Servers]
     AIC3 <==>|Output Sharing| LDS2
     NWL1 <==>|Output Sharing| LDS2
 
     classDef green fill:#ab9, stroke:#333, stroke-width:1px
     classDef blue fill:#89c, stroke:#333, stroke-width:1px
     classDef bluegreen fill:#9ca, stroke:#333, stroke-width:1px
+    classDef lightblue fill:#ace, stroke:#333, stroke-width:1px
     classDef red fill:#c89, stroke:#333, stroke-width:1px
     classDef lightorange fill:#ca8, stroke:#333, stroke-width:1px
-    classDef orange fill:#c98, stroke:#333, stroke-width:1px
+    classDef orange fill:#d96, stroke:#333, stroke-width:1px
     classDef purple fill:#a9c, stroke:#333, stroke-width:1px
     classDef bluegray fill:#9ab, stroke:#333, stroke-width:1px
     classDef gray fill:#fff, stroke:#333, stroke-width:1px
 
     class LDS1,LDS2 blue
-    class ICB bluegreen
+    class ICB lightblue
     class AIC1,AIC2,AIC3 orange
-    class NWL1,NWL2 green
-    class d1,d2,d3 bluegray
+    class NWL1,NWL2 bluegray
+    class d1,d2,d3 bluegreen
 ```
 
 

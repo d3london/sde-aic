@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p><strong>London Data Service (LDS)</strong>: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data warehouses and secure analytics environments for both research and NHS users.</p></li>
 <li><p><strong>DiscoverNOW Research/Analytics Environment</strong>: run by Imperial College Healthcare Partners, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.</p></li>
-<li><p><strong>London AI Centre (AIC)</strong>: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment, federated analytics, and deployment of machine learning tools, as well as expertise in health data and advanced analytics.</p></li>
+<li><p><strong>London AI Centre (AIC)</strong>: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment, federated analytics, and deployment of machine learning tools, as well as expertise in health data and advanced analytics. <br> <br></p></li>
 </ol>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -152,25 +152,26 @@ ul.task-list li input[type="checkbox"] {
     LDS1 ==&gt;|Linked data| ICB[(Integrated Care Board Sandpits x5)]
 
     ICB &lt;==&gt;|Collaborative analytics| AIC3[AIC Data/AI Hub]
-    ICB &lt;==&gt;|Output Sharing| LDS2[Terminology/Code/Model sharing]
+    ICB &lt;==&gt;|Output Sharing| LDS2[Terminology/Code/Model Servers]
     AIC3 &lt;==&gt;|Output Sharing| LDS2
     NWL1 &lt;==&gt;|Output Sharing| LDS2
 
     classDef green fill:#ab9, stroke:#333, stroke-width:1px
     classDef blue fill:#89c, stroke:#333, stroke-width:1px
     classDef bluegreen fill:#9ca, stroke:#333, stroke-width:1px
+    classDef lightblue fill:#ace, stroke:#333, stroke-width:1px
     classDef red fill:#c89, stroke:#333, stroke-width:1px
     classDef lightorange fill:#ca8, stroke:#333, stroke-width:1px
-    classDef orange fill:#c98, stroke:#333, stroke-width:1px
+    classDef orange fill:#d96, stroke:#333, stroke-width:1px
     classDef purple fill:#a9c, stroke:#333, stroke-width:1px
     classDef bluegray fill:#9ab, stroke:#333, stroke-width:1px
     classDef gray fill:#fff, stroke:#333, stroke-width:1px
 
     class LDS1,LDS2 blue
-    class ICB bluegreen
+    class ICB lightblue
     class AIC1,AIC2,AIC3 orange
-    class NWL1,NWL2 green
-    class d1,d2,d3 bluegray
+    class NWL1,NWL2 bluegray
+    class d1,d2,d3 bluegreen
 </pre>
 </div>
 </div>
