@@ -5,6 +5,13 @@ authors:
     affiliation: London AI Centre
   - name: Prof. James Teo
     affiliation: London AI Centre
+  - name: Dr. Jorge Cardoso
+    affiliation: London AI Centre
+  - name: Jawad Chaudhry
+    affiliation: London AI Centre
+  - name: Sigal Hachlili
+    affiliation: London AI Centre
+        
 ---
 
 ## Introduction
@@ -20,8 +27,8 @@ The SDE is presently led by **OneLondon**, as part of an overarching London Heal
 (2) **DiscoverNOW Research/Analytics Environment**: run by Imperial College Healthcare Partners, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.
 
 (3) **London AI Centre (AIC)**: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment, federated analytics, and deployment of machine learning tools, as well as expertise in health data and advanced analytics.
-</br>
-</br>
+
+
 ```{mermaid}
 %%| label: fig-sde-summary
 %%| fig-cap: "Summary of SDE components and data flows. Each London ICB is provisioned with its own data/analytics environment through the LDS. FLIP = Federated Learning and Interoperability Platform."
