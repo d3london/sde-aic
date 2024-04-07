@@ -1,0 +1,72 @@
+---
+title: Introduction to the London SDE / AI Centre Programme
+authors:
+  - name: Dr. Joe Zhang
+    affiliation: London AI Centre
+  - name: Prof. James Teo
+    affiliation: London AI Centre
+---
+
+## Introduction
+
+## What is the London SDE?
+
+The London Secure Data Environment (SDE) programme is part of a national effort to enable secure and more powerful analytics for NHS, academic, and commercial users. Uniquely amongst regional peers, the London SDE does not focus on a single research platform. Rather, it places a focus on developing pan-London data infrastructure and capabilities that can deliver value to patients, care providers, and commissioners. This is in addition to building data environments that support commercial research and development partnerships.
+
+The SDE is presently led by **OneLondon**, as part of an overarching London Health Data Strategy, coalescing around three components (@fig-sde-summary).
+
+(1) **London Data Service (LDS)**: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data warehouses and secure analytics environments for both research and NHS users.
+
+(2) **DiscoverNOW Research/Analytics Environment**: run by Imperial College Healthcare Partners, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.
+
+(3) **London AI Centre (AIC)**: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment, federated analytics, and deployment of machine learning tools, as well as expertise in health data and advanced analytics.
+
+```{mermaid}
+%%| label: fig-sde-summary
+%%| fig-cap: "Summary of SDE components and data flows. Each London ICB is provisioned with its own data/analytics environment through the LDS. FLIP = Federated Learning and Interoperability Platform."
+flowchart TD
+    d1[GP Surgeries] ==>|Primary care data| LDS1[(London Data Service)]
+    d2[NHS Digital] ==>|Commissioning data| LDS1
+    d3[Local data sources] ==>|Other ICB data| ICB
+    AIC1[AIC CogStack] ==>|Unstructured data| LDS1
+    LDS1 ==>|Linked data| NWL1[(NWL Research/Analytics Environment)]
+    AIC2[AIC FLIP] ==> |Multi-modal data| NWL1
+    AIC2[AIC FLIP] ==> |Hospital cancer data| LDS1
+    LDS1 ==>|Linked data| ICB[(Integrated Care Board Sandpits x5)]
+
+    ICB <==>|Collaborative analytics| AIC3[AIC Data/AI Hub]
+    ICB <==>|Output Sharing| LDS2[Terminology/Code/Model sharing]
+    AIC3 <==>|Output Sharing| LDS2
+    NWL1 <==>|Output Sharing| LDS2
+
+    classDef green fill:#ab9, stroke:#333, stroke-width:1px
+    classDef blue fill:#89c, stroke:#333, stroke-width:1px
+    classDef bluegreen fill:#9ca, stroke:#333, stroke-width:1px
+    classDef red fill:#c89, stroke:#333, stroke-width:1px
+    classDef lightorange fill:#ca8, stroke:#333, stroke-width:1px
+    classDef orange fill:#c98, stroke:#333, stroke-width:1px
+    classDef purple fill:#a9c, stroke:#333, stroke-width:1px
+    classDef bluegray fill:#9ab, stroke:#333, stroke-width:1px
+    classDef gray fill:#fff, stroke:#333, stroke-width:1px
+
+    class LDS1,LDS2 blue
+    class ICB bluegreen
+    class AIC1,AIC2,AIC3 orange
+    class NWL1,NWL2 green
+    class d1,d2,d3 bluegray
+```
+
+
+## Role of the London AI Centre
+
+
+
+## Ways of working
+
+
+
+## Broad objectives and work packages
+
+
+
+## Proposed use-cases 
