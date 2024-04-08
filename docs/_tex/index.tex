@@ -136,8 +136,7 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{London SDE/AIC Programme\texttt{:} Introduction and Proposed
-Use-Cases}
+\title{London SDE/AIC Programme: Introduction and Proposed Use-Cases}
 \author{Dr.~Joe Zhang \and Prof.~James Teo \and Dr.~Jorge
 Cardoso \and Jawad Chaudhry \and Sigal Hachlili}
 \date{}
@@ -150,28 +149,27 @@ Cardoso \and Jawad Chaudhry \and Sigal Hachlili}
 \subsection{Introduction}\label{introduction}
 
 The \href{https://www.aicentre.co.uk/}{London AI Centre} (AIC) has been
-commissioned to join the London Secure Data Environment (SDE) programme
-for its latest phase: to build on existing infrastructural work, and
-extend AI technologies and advanced analytics capabilities to
-stakeholders and environments across London. This \emph{living document}
-summarises the latest state of planning for the programme, as a
-transparent aid to internal stakeholders, and collaborators in
-Integrated Care Boards and the wider London NHS ecosystem.
+commissioned as part of the London Secure Data Environment (SDE)
+programme for its latest phase: to extend AI technologies and analytics
+capabilities to stakeholders and data environments across London. This
+document summarises the latest state of planning for the programme, as
+an aid to internal and external stakeholders including Integrated Care
+Boards and the wider London NHS ecosystem.
 
 \subsection{What is the London SDE?}\label{what-is-the-london-sde}
 
-The London Secure Data Environment (SDE) programme is part of a national
-effort to enable secure and more powerful analytics for NHS, academic,
-and commercial users. Uniquely amongst regional peers, the London SDE
-does not focus on a single research platform. Rather, it places a focus
-on developing pan-London data infrastructure and capabilities that can
-deliver value to patients, care providers, and commissioners. This is in
-addition to building data environments that support commercial research
-and development partnerships.
+The London Secure Data Environment (SDE) is a pan-London NHS programme
+that is part of a national effort to enable secure and more powerful
+analytics for NHS, academic, and commercial users. Uniquely amongst
+regional peers, the London SDE does not focus on a single research
+platform. Rather, it places a focus on developing data infrastructure
+and capabilities that can support population health, care providers, and
+commissioners. This is in addition to building data environments that
+enable commercial research and development partnerships.
 
-The SDE is presently led by \textbf{OneLondon}, as part of an
-overarching London Health Data Strategy, coalescing around three
-components (Figure~\ref{fig-sde-summary}).
+The SDE is led by \textbf{OneLondon}, as part of an overarching London
+Health Data Strategy, coalescing around three components
+(Figure~\ref{fig-sde-summary}):
 
 \begin{enumerate}
 \def\labelenumi{(\arabic{enumi})}
@@ -189,16 +187,16 @@ components (Figure~\ref{fig-sde-summary}).
 \item
   \textbf{London AI Centre (AIC)}: a national centre of excellence for
   applied data science and AI, the AIC provides frontier technology for
-  data enrichment, federated analytics, and deployment of machine
-  learning tools, as well as expertise in health data and advanced
-  analytics.
+  data enrichment (CogStack), federated analytics (FLIP), and deployment
+  of machine learning tools, as well as expertise in health data and
+  advanced analytics.
 \end{enumerate}
 
 \begin{figure}
 
 \centering{
 
-\includegraphics[width=7.9in,height=5.71in]{index_files/figure-latex/mermaid-figure-2.png}
+\includegraphics[width=5in,height=3.31in]{index_files/figure-latex/mermaid-figure-3.png}
 
 }
 
@@ -214,6 +212,64 @@ Interoperability Platform.}
 Notebook}}
 
 \subsection{Technology and objectives}\label{technology-and-objectives}
+
+The contribution from the London AIC consists of technology deployment
+and supporting expertise, that enable a number of key objectives
+(Figure~\ref{fig-aic-objectives}) over the two year programme. This
+contribution includes the following:
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  \textbf{Federated Learning and Interoperability Platform (FLIP)}:
+  Developed and tested over four years, FLIP consists of (a) secure data
+  environments within NHS hospital Trusts for multi-modal imaging data
+  and structured data in a common data model; and (b) a mechanism to
+  query data and train AI models across these secure enclaves without
+  the need to physically transfer data. FLIP is presently installed in
+  four major London Trusts. Integrating FLIP into the SDE will enable
+  hospital data (such as cancer data) to be surfaced into the LDS, and
+  multi-modal capabilities to support research in precision healthcare.
+\item
+  \textbf{CogStack}: As an advanced natural language processing
+  platform, CogStack can turn the large quantities of health information
+  that are found in narrative text, into structured and analysable data.
+  Currently actively used in Trusts to assist with clinical coding from
+  notes and clinic letters, CogStack can surface secondary care and
+  cancer pathway data, and previously unseen primary care data, into the
+  SDE ecosystem.
+\item
+  \textbf{AIC Data/AI Hub}: The AIC hosts substantial health data and AI
+  implementation expertise, that will provide practical support in data
+  operations, engineering, analytics, and machine learning development
+  and deployment. A primary aim is to help Integrated Care Boards (ICB)
+  migrate data pipelines and analytics onto the LDS, and to produce
+  reproducible analytics pipelines for data science and predictive
+  analytics capabilities. As the LDS ICB environments share a common
+  data model, any pipelines created in collaboration with a single ICB,
+  can be adapted and used for any other ICB (or deployed across multiple
+  environments to create pan-London insights). This will also facilitate
+  shared terminologies, and validating/versioning/serving NHS-owned
+  machine learning models across regions.
+\end{enumerate}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=6in,height=2.72in]{index_files/figure-latex/mermaid-figure-4.png}
+
+}
+
+\caption{\label{fig-aic-objectives}Summary of AIC work components and
+objectives. FLIP = Federated Learning and Interoperability Platform; ML
+= Machine Learning.}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://d3london.github.io/sde_aic_docs/index.qmd.html}{Article
+Notebook}}
 
 \subsection{Proposed use-cases}\label{proposed-use-cases}
 

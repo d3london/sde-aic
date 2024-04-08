@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
-<meta name="citation_title" content="London SDE/AIC Programme`:` Introduction and Proposed Use-Cases">
+<meta name="citation_title" content="London SDE/AIC Programme: Introduction and Proposed Use-Cases">
 <meta name="citation_author" content="Dr. Joe Zhang">
 <meta name="citation_author" content="Prof. James Teo">
 <meta name="citation_author" content="Dr. Jorge Cardoso">
@@ -59,7 +59,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">London SDE/AIC Programme<code>:</code> Introduction and Proposed Use-Cases</h1>
+      <h1 class="title">London SDE/AIC Programme: Introduction and Proposed Use-Cases</h1>
           </div>
 
     
@@ -151,18 +151,18 @@ ul.task-list li input[type="checkbox"] {
 <p><em>Version 0.5 (last updated 2024 Apr 7)</em></p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The <a href="https://www.aicentre.co.uk/">London AI Centre</a> (AIC) has been commissioned to join the London Secure Data Environment (SDE) programme for its latest phase: to build on existing infrastructural work, and extend AI technologies and advanced analytics capabilities to stakeholders and environments across London. This <em>living document</em> summarises the latest state of planning for the programme, as a transparent aid to internal stakeholders, and collaborators in Integrated Care Boards and the wider London NHS ecosystem.</p>
+<p>The <a href="https://www.aicentre.co.uk/">London AI Centre</a> (AIC) has been commissioned as part of the London Secure Data Environment (SDE) programme for its latest phase: to extend AI technologies and analytics capabilities to stakeholders and data environments across London. This document summarises the latest state of planning for the programme, as an aid to internal and external stakeholders including Integrated Care Boards and the wider London NHS ecosystem.</p>
 </section>
 <section id="what-is-the-london-sde" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-the-london-sde">What is the London SDE?</h2>
-<p>The London Secure Data Environment (SDE) programme is part of a national effort to enable secure and more powerful analytics for NHS, academic, and commercial users. Uniquely amongst regional peers, the London SDE does not focus on a single research platform. Rather, it places a focus on developing pan-London data infrastructure and capabilities that can deliver value to patients, care providers, and commissioners. This is in addition to building data environments that support commercial research and development partnerships.</p>
-<p>The SDE is presently led by <strong>OneLondon</strong>, as part of an overarching London Health Data Strategy, coalescing around three components (<a href="#fig-sde-summary" class="quarto-xref">Figure&nbsp;1</a>).</p>
+<p>The London Secure Data Environment (SDE) is a pan-London NHS programme that is part of a national effort to enable secure and more powerful analytics for NHS, academic, and commercial users. Uniquely amongst regional peers, the London SDE does not focus on a single research platform. Rather, it places a focus on developing data infrastructure and capabilities that can support population health, care providers, and commissioners. This is in addition to building data environments that enable commercial research and development partnerships.</p>
+<p>The SDE is led by <strong>OneLondon</strong>, as part of an overarching London Health Data Strategy, coalescing around three components (<a href="#fig-sde-summary" class="quarto-xref">Figure&nbsp;1</a>):</p>
 <ol type="1">
 <li><p><strong>London Data Service (LDS)</strong>: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data warehouses and secure analytics environments for both research and NHS users.</p></li>
 <li><p><strong>DiscoverNOW Research/Analytics Environment</strong>: run by Imperial College Healthcare Partners, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.</p></li>
-<li><p><strong>London AI Centre (AIC)</strong>: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment, federated analytics, and deployment of machine learning tools, as well as expertise in health data and advanced analytics.</p></li>
+<li><p><strong>London AI Centre (AIC)</strong>: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment (CogStack), federated analytics (FLIP), and deployment of machine learning tools, as well as expertise in health data and advanced analytics.</p></li>
 </ol>
-<div class="cell" data-layout-align="default">
+<div class="cell" data-fig-width="5" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-sde-summary" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -170,13 +170,20 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-sde-summary">flowchart TD
     d1[GP Surgeries] ==&gt;|Primary care data| LDS1[(London Data Service)]
-    d2[NHS Digital] ==&gt;|Commissioning data| LDS1
-    d3[Local data sources] ==&gt;|Other ICB data| ICB
-    AIC1[AIC CogStack] ==&gt;|Unstructured data| LDS1
+    d2[NHS Digital] ==&gt;|Commissioning datasets| LDS1
+    d3[Local data sources] ==&gt;|ICS data| ICB
+    AIC1["CogStack in Trusts"] ==&gt;|"Unstructured data 
+                                          (hospitals)"| LDS1
+    LDS1==&gt; AIC1a["CogStack in LDS"]
+    AIC1a==&gt;|"Unstructured data 
+                (primary care)"| LDS1
     LDS1 ==&gt;|Linked data| NWL1[(NWL Research/Analytics Environment)]
-    AIC2[AIC FLIP] ==&gt; |Multi-modal data| NWL1
-    AIC2[AIC FLIP] ==&gt; |Hospital cancer data| LDS1
-    LDS1 ==&gt;|Linked data| ICB[(Integrated Care Board Sandpits x5)]
+
+    AIC2["AIC FLIP"] ==&gt; |"Multi-modal data 
+                                          (imaging metadata)"| NWL1
+    AIC2 ==&gt; |Hospital cancer data| LDS1
+    LDS1 ==&gt;|Linked data| ICB[("Integrated Care Board Sandpits 
+                                x5: NEL/SEL/SWL/NWL/NCL")]
 
     ICB &lt;==&gt;|Collaborative analytics| AIC3[AIC Data/AI Hub]
     ICB &lt;==&gt;|Output Sharing| LDS2[Terminology/Code/Model Servers]
@@ -196,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
 
     class LDS1,LDS2 blue
     class ICB lightblue
-    class AIC1,AIC2,AIC3 orange
+    class AIC1,AIC1a,AIC2,AIC3 orange
     class NWL1,NWL2 bluegray
     class d1,d2,d3 bluegreen
 </pre>
@@ -212,6 +219,67 @@ Figure&nbsp;1: Summary of SDE components and data flows. Each London ICB is prov
 </section>
 <section id="technology-and-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="technology-and-objectives">Technology and objectives</h2>
+<p>The contribution from the London AIC consists of technology deployment and supporting expertise, that enable a number of key objectives (<a href="#fig-aic-objectives" class="quarto-xref">Figure&nbsp;2</a>) over the two year programme. This contribution includes the following:</p>
+<ol type="1">
+<li><p><strong>Federated Learning and Interoperability Platform (FLIP)</strong>: Developed and tested over four years, FLIP consists of (a) secure data environments within NHS hospital Trusts for multi-modal imaging data and structured data in a common data model; and (b) a mechanism to query data and train AI models across these secure enclaves without the need to physically transfer data. FLIP is presently installed in four major London Trusts. Integrating FLIP into the SDE will enable hospital data (such as cancer data) to be surfaced into the LDS, and multi-modal capabilities to support research in precision healthcare.</p></li>
+<li><p><strong>CogStack</strong>: As an advanced natural language processing platform, CogStack can turn the large quantities of health information that are found in narrative text, into structured and analysable data. Currently actively used in Trusts to assist with clinical coding from notes and clinic letters, CogStack can surface secondary care and cancer pathway data, and previously unseen primary care data, into the SDE ecosystem.</p></li>
+<li><p><strong>AIC Data/AI Hub</strong>: The AIC hosts substantial health data and AI implementation expertise, that will provide practical support in data operations, engineering, analytics, and machine learning development and deployment. A primary aim is to help Integrated Care Boards (ICB) migrate data pipelines and analytics onto the LDS, and to produce reproducible analytics pipelines for data science and predictive analytics capabilities. As the LDS ICB environments share a common data model, any pipelines created in collaboration with a single ICB, can be adapted and used for any other ICB (or deployed across multiple environments to create pan-London insights). This will also facilitate shared terminologies, and validating/versioning/serving NHS-owned machine learning models across regions.</p></li>
+</ol>
+<div class="cell" data-fig-width="6" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-aic-objectives" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-aic-objectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-aic-objectives">flowchart LR
+    FLIP["FLIP"] ==&gt; A1["Hospital imaging 
+                      metadata standardisation"] 
+    FLIP ==&gt; A2[Technology installation]
+    A1 ==&gt; A3["Federated model training
+              for research collaborations"]
+    A2 ==&gt; A3
+
+    A2 ==&gt; A4[Hospital data querying]
+    B1 ==&gt; A4
+
+    COG["CogStack"] ==&gt; B1["Hospital cancer data 
+                            standardisation"]
+    COG ==&gt; B2[LDS installation] ==&gt; B3["Primary care unstructured 
+                                    data standardisation"]
+
+    A4 ==&gt; C3
+    B3 ==&gt; C3
+
+    HUB[Data/AI Hub] ==&gt; C1["Assistance with existing 
+                              stack migration"]
+    C1 ==&gt; C2[Standardised cohort pipelines]
+    C2 ==&gt; C3["Reproducible analytics/ML pipelines
+                re-usable across ICBs"]
+
+    classDef yellow fill:#ed6, stroke:#333, stroke-width:1px
+    classDef lightorange fill:#fb3, stroke:#333, stroke-width:1px
+    classDef orange fill:#f81, stroke:#333, stroke-width:1px
+
+    classDef yellowbase fill:#ed6, stroke:#333, stroke-width:4px
+    classDef lightorangebase fill:#fb3, stroke:#333, stroke-width:4px
+    classDef orangebase fill:#f81, stroke:#333, stroke-width:4px
+
+    class FLIP yellowbase
+    class A1,A2,A3,A4 yellow
+    class COG lightorangebase
+    class B1,B2,B3 lightorange
+    class HUB orangebase
+    class C1,C2,C3 orange
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aic-objectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Summary of AIC work components and objectives. FLIP = Federated Learning and Interoperability Platform; ML = Machine Learning.
+</figcaption>
+</figure>
+</div>
+</div>
+<a class="quarto-notebook-link" id="nblink-2" href="index-preview.html">Source: Article Notebook</a></div>
 </section>
 <section id="proposed-use-cases" class="level2">
 <h2 class="anchored" data-anchor-id="proposed-use-cases">Proposed use-cases</h2>
