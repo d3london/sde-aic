@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#proposed-use-cases" id="toc-proposed-use-cases" class="nav-link" data-scroll-target="#proposed-use-cases">Proposed use-cases</a>
   <ul class="collapse">
   <li><a href="#systematic-measurement-of-group-and-individual-health-inequality" id="toc-systematic-measurement-of-group-and-individual-health-inequality" class="nav-link" data-scroll-target="#systematic-measurement-of-group-and-individual-health-inequality">Systematic measurement of group and individual health inequality</a></li>
-  <li><a href="#cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example" id="toc-cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example" class="nav-link" data-scroll-target="#cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example">Cardiovascular disease prevention through decision intelligence (Hypertension as an example)</a></li>
+  <li><a href="#cardiovascular-disease-prevention-through-decision-intelligence" id="toc-cardiovascular-disease-prevention-through-decision-intelligence" class="nav-link" data-scroll-target="#cardiovascular-disease-prevention-through-decision-intelligence">Cardiovascular disease prevention through decision intelligence</a></li>
   <li><a href="#actionable-admission-risk-stratification" id="toc-actionable-admission-risk-stratification" class="nav-link" data-scroll-target="#actionable-admission-risk-stratification">Actionable admission risk stratification</a></li>
   <li><a href="#joining-up-cancer-pathways" id="toc-joining-up-cancer-pathways" class="nav-link" data-scroll-target="#joining-up-cancer-pathways">Joining up cancer pathways</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>DiscoverNOW Research/Analytics Environment</strong>: run by Imperial College Healthcare Partners, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.</p></li>
 <li><p><strong>London AI Centre (AIC)</strong>: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment (CogStack), federated analytics (FLIP), and deployment of machine learning tools, as well as expertise in health data and advanced analytics.</p></li>
 </ol>
-<div class="cell" data-fig-width="5" data-layout-align="default">
+<div class="cell" data-fig-width="6" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-sde-summary" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -226,11 +226,11 @@ Figure&nbsp;1: Summary of SDE components and data flows. Each London ICB is prov
 </section>
 <section id="technology-and-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="technology-and-objectives">Technology and objectives</h2>
-<p>The contribution from the London AIC consists of technology deployment and supporting expertise, that enable a number of key objectives (<a href="#fig-aic-objectives" class="quarto-xref">Figure&nbsp;2</a>) over the two year programme. This contribution includes the following:</p>
+<p>The contribution from the London AIC consists of technology deployment and supporting expertise, that enable a number of objectives (<a href="#fig-aic-objectives" class="quarto-xref">Figure&nbsp;2</a>) over the two year programme. This contribution includes the following:</p>
 <ol type="1">
-<li><p><strong>Federated Learning and Interoperability Platform (FLIP)</strong>: Developed and tested over four years, FLIP consists of (a) secure data environments within NHS hospital Trusts for multi-modal imaging data and structured data in a common data model; and (b) a mechanism to query data and train AI models across these secure enclaves without the need to physically transfer data. FLIP is presently installed in four major London Trusts. Integrating FLIP into the SDE will enable hospital data (such as cancer data) to be surfaced into the LDS, and multi-modal capabilities to support research in precision healthcare.</p></li>
+<li><p><strong>Federated Learning and Interoperability Platform (FLIP)</strong>: Developed and tested over four years, FLIP consists of (a) secure data environments within NHS hospital Trusts for multi-modal imaging data, imaging metadata, and structured health record data in a common data model; and (b) a mechanism to query data and train AI models across these secure enclaves without the need to physically transfer data. FLIP is presently installed in four major London Trusts. Integrating FLIP into the SDE will enable hospital data (such as cancer data) to be surfaced into the LDS, and multi-modal capabilities to support research in precision healthcare.</p></li>
 <li><p><strong>CogStack</strong>: As an advanced natural language processing platform, CogStack can turn the large quantities of health information that are found in narrative text, into structured and analysable data. Currently actively used in Trusts to assist with clinical coding from notes and clinic letters, CogStack can surface secondary care and cancer pathway data, and previously unseen primary care data, into the SDE ecosystem.</p></li>
-<li><p><strong>AIC Data/AI Hub</strong>: The AIC hosts substantial health data and AI implementation expertise, that will provide practical support in data operations, engineering, analytics, and machine learning development and deployment. A primary aim is to help Integrated Care Boards (ICB) migrate data pipelines and analytics onto the LDS, and to produce reproducible analytics pipelines for data science and predictive analytics capabilities. As the LDS ICB environments share a common data model, any pipelines created in collaboration with a single ICB, can be adapted and used for any other ICB (or deployed across multiple environments to create pan-London insights). This will also facilitate shared terminologies, and validating/versioning/serving NHS-owned machine learning models across regions.</p></li>
+<li><p><strong>AIC Data/AI Hub</strong>: The AIC hosts substantial health data and AI implementation expertise, that will provide practical support in data engineering, clinical informatics, data science, and machine learning (ML) development and deployment. Primary aims are to (a) help Integrated Care Boards (ICB) migrate data pipelines and analytics onto the LDS, (b) produce reproducible analytics pipelines for data science and predictive analytics capabilities, (c) work together to make ICBs self-sufficient in these capabilities.</p></li>
 </ol>
 <div class="cell" data-fig-width="6" data-layout-align="default">
 <div class="cell-output-display">
@@ -289,16 +289,71 @@ Figure&nbsp;2: Summary of AIC work components and objectives. FLIP = Federated L
 </div>
 </div>
 <a class="quarto-notebook-link" id="nblink-2" href="index-preview.html">Source: Article Notebook</a></div>
+<p>Of relevance to ICBs, resources are available to support migration of existing analytics into LDS Snowflake ‘Sandpits’, and constructing standard patient phenotype/cohort using definitions hosted on a London terminology server. This will support building more complex reproducible analytics/machine learning pipelines, and delivery of ‘last mile’ insights to clinicians. As the LDS ICB environments share a common data model, any pipelines created in collaboration with a single ICB, can be adapted and used for any other ICB (or deployed across multiple environments to create pan-London insights). This will also facilitate shared terminologies, and validating/versioning/serving NHS-owned machine learning models across regions.</p>
 </section>
 <section id="proposed-use-cases" class="level2">
 <h2 class="anchored" data-anchor-id="proposed-use-cases">Proposed use-cases</h2>
-<p>The following use-cases are <em>examples</em> of the type of work that are possible to produce within the SDE ecosystem, conducted collaboratively between ICB/NHS analytics teams and the AIC. Use-cases align to the London Health Data Strategy and long term condition priorities, as well as national programmes such as CORE20PLUS5, and are proposed here following early discussions with London ICBs. An overarching objective for any work is to build a reproducible code base that is sharable between ICBs, and which can be optimised for local uses/dashboards, or used to create aggregated pan-London insights.</p>
-<p>Prior to any of the below projects being conducted, SDE/AIC resources are also available to help ICBs migrate their current pipelines and dashboards into the new LDS data environments (<a href="#fig-aic-objectives" class="quarto-xref">Figure&nbsp;2</a>).</p>
+<p>The following use-cases are <em>examples</em> of analytics projects that can be supported within the SDE ecosystem, in collaboration between ICB/NHS analytics teams and the AIC/SDE team. Use-cases align to the London Health Data Strategy and long term condition priorities, as well as national programmes such as CORE20PLUS5, and are proposed here following early discussions with London ICBs. An overarching objective for any work is to build a code base that can be shared between ICBs and improved collaboratively.</p>
 <section id="systematic-measurement-of-group-and-individual-health-inequality" class="level3">
 <h3 class="anchored" data-anchor-id="systematic-measurement-of-group-and-individual-health-inequality">Systematic measurement of group and individual health inequality</h3>
+<p><strong>AIM:</strong> To systematically surface multiple dimensions of health inequality across sociodemographic/geospatial groups and individual patients, and to monitor this data continuously across key long-term conditions.</p>
+<p><strong>SUMMARY:</strong> Health inequality refers to measurable differences in health outcomes and determinants between individuals or groups (e.g.&nbsp;morbidity, co-morbidity, disease complications/death, healthcare access, disease screening, treatment delivery). Where individuals and groups experience health inequality, the principle of health <em>equity</em> emphases the importance of reducing disparities by modifying outcome determinants that are unfairly distributed.</p>
+Health inequality is traditionally measured and visualised as a comparison of prevalence/incidence across different population groups. While helpful for broad insights, this offers limited understanding of complex individual circumstances. This type of measurement can be extended to individual patients, by using clinical domain knowledge to define ‘indicators’ of unequal disease, diagnosis, and treatment pathways. For example, in an individual with Diabetes Mellitus, indicators of inequality can include:
+<ol type="a">
+<li>
+Diabetes surfacing at an early age;
+</li>
+<li>
+Diagnosis in proximity to cardiovascular risk factor co-morbidities;
+</li>
+<li>
+Diagnosis at a <em>late</em> age but with more severe disease, as measured by HbA1c or presence of end-organ complications;
+</li>
+<li>
+Reduced health engagement/encounters/treatment compared to what is expected based on disease severity;
+</li>
+<li>
+Shorter time to complications and mortality following diagnosis.
+</li>
+</ol>
+<p>The precise contribution of factors to outcomes can be measured and understood in a multivariate statistical model. Overall, the presence and magnitude of indicators can be used to visualise, monitor, and explain different types of inequality, including through comparison of groups and individuals to ‘what is expected’ in a background population. The outcome is an increase in actionability, with identification of modifiable determinants of inequality ( = inequity) for small groups and individuals.</p>
+<p><strong>METHODS:</strong> The below shows an example workflow for Diabetes Mellitus, but can be applied to any long-term condition (not including cancer).</p>
+<div class="cell" data-fig-width="6" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["Define terminologies for condition
+        and supporting concepts"] ==&gt; B["Reproducible pipelines creating per 
+                                      group summary prevalence/incidence
+                                      for any given cohort definition"]
+    
+    C["Define inequality indicators for 
+    given condition based on domain
+    knowledge and existing evidence"] ==&gt; D["Multivariate regression and survival
+                                              models to understand significance of
+                                            inequality indicators on outcomes"]
+
+    A ==&gt; D
+
+    D==&gt;E["Given definition of group or individual: 
+            visualise indicators of inequality 
+            vs relevant baseline population"]
+
+    classDef gray fill:#fff, stroke:#333, stroke-width:1px
+
+    class A,B,C,D,E gray
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+<a class="quarto-notebook-link" id="nblink-3" href="index-preview.html">Source: Article Notebook</a></div>
+<p><strong>OUTPUTS:</strong> The primary output of this project would be a code-base that takes a cohort definition and a list of indicators as an input, and can be run to produce summary tables and statistics for groups and individual patients (where required). The code can be adapted by ICBs and used to support local dashboards. Code can be used for higher-level interval reporting and monitoring for the London region.</p>
 </section>
-<section id="cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example" class="level3">
-<h3 class="anchored" data-anchor-id="cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example">Cardiovascular disease prevention through decision intelligence (Hypertension as an example)</h3>
+<section id="cardiovascular-disease-prevention-through-decision-intelligence" class="level3">
+<h3 class="anchored" data-anchor-id="cardiovascular-disease-prevention-through-decision-intelligence">Cardiovascular disease prevention through decision intelligence</h3>
 </section>
 <section id="actionable-admission-risk-stratification" class="level3">
 <h3 class="anchored" data-anchor-id="actionable-admission-risk-stratification">Actionable admission risk stratification</h3>
