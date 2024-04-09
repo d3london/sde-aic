@@ -11,7 +11,7 @@ authors:
     affiliation: London AI Centre
   - name: Sigal Hachlili
     affiliation: London AI Centre
-        
+
 ---
 
 _Version 0.5 (last updated 2024 Apr 7)_
@@ -93,29 +93,31 @@ The contribution from the London AIC consists of technology deployment and suppo
 %%| label: fig-aic-objectives
 %%| fig-cap: "Summary of AIC work components and objectives. FLIP = Federated Learning and Interoperability Platform; ML = Machine Learning."
 flowchart LR
-    FLIP["FLIP"] ==> A1["Hospital imaging 
-                      metadata standardisation"] 
+    FLIP["FLIP"] ==> A1["Standardising hospital 
+                          imaging metadata"] 
     FLIP ==> A2[Technology installation]
     A1 ==> A3["Federated model training
               for research collaborations"]
     A2 ==> A3
 
-    A2 ==> A4[Hospital data querying]
+    A2 ==> A4["Enabling hospital 
+              data queries"]
     B1 ==> A4
 
-    COG["CogStack"] ==> B1["Hospital cancer data 
-                            standardisation"]
-    COG ==> B2[LDS installation] ==> B3["Primary care unstructured 
-                                    data standardisation"]
+    COG["CogStack"] ==> B1["Standardising hospital 
+                            cancer data"]
+    COG ==> B2[LDS installation] ==> B3["Standardising primary care 
+                                      unstructured data"]
 
     A4 ==> C3
     B3 ==> C3
 
-    HUB[Data/AI Hub] ==> C1["Assistance with existing 
-                              stack migration"]
-    C1 ==> C2[Standardised cohort pipelines]
-    C2 ==> C3["Reproducible analytics/ML pipelines
-                re-usable across ICBs"]
+    HUB[Data/AI Hub] ==> C1["Assisting ICBs with migration 
+                              of existing pipelines"]
+    C1 ==> C2["Building standardised 
+                cohort pipelines"]
+    C2 ==> C3["Building reproducible analytics/ML 
+              pipelines with sharable code base"]
 
     classDef yellow fill:#ed6, stroke:#333, stroke-width:1px
     classDef lightorange fill:#fb3, stroke:#333, stroke-width:1px
@@ -134,3 +136,21 @@ flowchart LR
 ```
 
 ## Proposed use-cases
+
+The following use-cases are _examples_ of the type of work that are possible to produce within the SDE ecosystem, conducted collaboratively between ICB/NHS analytics teams and the AIC. Use-cases align to the London Health Data Strategy and long term condition priorities, as well as national programmes such as CORE20PLUS5, and are proposed here following early discussions with London ICBs. An overarching objective for any work is to build a reproducible code base that is sharable between ICBs, and which can be optimised for local uses/dashboards, or used to create aggregated pan-London insights.
+
+Prior to any of the below projects being conducted, SDE/AIC resources are also available to help ICBs migrate their current pipelines and dashboards into the new LDS data environments (@fig-aic-objectives).  
+
+### Systematic measurement of group and individual health inequality 
+
+
+### Cardiovascular disease prevention through decision intelligence (Hypertension as an example)
+
+
+### Actionable admission risk stratification
+
+
+### Joining up cancer pathways
+
+
+### 

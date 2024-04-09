@@ -135,7 +135,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#what-is-the-london-sde" id="toc-what-is-the-london-sde" class="nav-link" data-scroll-target="#what-is-the-london-sde">What is the London SDE?</a></li>
   <li><a href="#technology-and-objectives" id="toc-technology-and-objectives" class="nav-link" data-scroll-target="#technology-and-objectives">Technology and objectives</a></li>
-  <li><a href="#proposed-use-cases" id="toc-proposed-use-cases" class="nav-link" data-scroll-target="#proposed-use-cases">Proposed use-cases</a></li>
+  <li><a href="#proposed-use-cases" id="toc-proposed-use-cases" class="nav-link" data-scroll-target="#proposed-use-cases">Proposed use-cases</a>
+  <ul class="collapse">
+  <li><a href="#systematic-measurement-of-group-and-individual-health-inequality" id="toc-systematic-measurement-of-group-and-individual-health-inequality" class="nav-link" data-scroll-target="#systematic-measurement-of-group-and-individual-health-inequality">Systematic measurement of group and individual health inequality</a></li>
+  <li><a href="#cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example" id="toc-cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example" class="nav-link" data-scroll-target="#cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example">Cardiovascular disease prevention through decision intelligence (Hypertension as an example)</a></li>
+  <li><a href="#actionable-admission-risk-stratification" id="toc-actionable-admission-risk-stratification" class="nav-link" data-scroll-target="#actionable-admission-risk-stratification">Actionable admission risk stratification</a></li>
+  <li><a href="#joining-up-cancer-pathways" id="toc-joining-up-cancer-pathways" class="nav-link" data-scroll-target="#joining-up-cancer-pathways">Joining up cancer pathways</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="index-preview.html"><i class="bi bi-journal-code"></i>Article Notebook</a></li></ul></div></nav>
 </div>
@@ -232,29 +239,31 @@ Figure&nbsp;1: Summary of SDE components and data flows. Each London ICB is prov
 <div aria-describedby="fig-aic-objectives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-aic-objectives">flowchart LR
-    FLIP["FLIP"] ==&gt; A1["Hospital imaging 
-                      metadata standardisation"] 
+    FLIP["FLIP"] ==&gt; A1["Standardising hospital 
+                          imaging metadata"] 
     FLIP ==&gt; A2[Technology installation]
     A1 ==&gt; A3["Federated model training
               for research collaborations"]
     A2 ==&gt; A3
 
-    A2 ==&gt; A4[Hospital data querying]
+    A2 ==&gt; A4["Enabling hospital 
+              data queries"]
     B1 ==&gt; A4
 
-    COG["CogStack"] ==&gt; B1["Hospital cancer data 
-                            standardisation"]
-    COG ==&gt; B2[LDS installation] ==&gt; B3["Primary care unstructured 
-                                    data standardisation"]
+    COG["CogStack"] ==&gt; B1["Standardising hospital 
+                            cancer data"]
+    COG ==&gt; B2[LDS installation] ==&gt; B3["Standardising primary care 
+                                      unstructured data"]
 
     A4 ==&gt; C3
     B3 ==&gt; C3
 
-    HUB[Data/AI Hub] ==&gt; C1["Assistance with existing 
-                              stack migration"]
-    C1 ==&gt; C2[Standardised cohort pipelines]
-    C2 ==&gt; C3["Reproducible analytics/ML pipelines
-                re-usable across ICBs"]
+    HUB[Data/AI Hub] ==&gt; C1["Assisting ICBs with migration 
+                              of existing pipelines"]
+    C1 ==&gt; C2["Building standardised 
+                cohort pipelines"]
+    C2 ==&gt; C3["Building reproducible analytics/ML 
+              pipelines with sharable code base"]
 
     classDef yellow fill:#ed6, stroke:#333, stroke-width:1px
     classDef lightorange fill:#fb3, stroke:#333, stroke-width:1px
@@ -283,6 +292,23 @@ Figure&nbsp;2: Summary of AIC work components and objectives. FLIP = Federated L
 </section>
 <section id="proposed-use-cases" class="level2">
 <h2 class="anchored" data-anchor-id="proposed-use-cases">Proposed use-cases</h2>
+<p>The following use-cases are <em>examples</em> of the type of work that are possible to produce within the SDE ecosystem, conducted collaboratively between ICB/NHS analytics teams and the AIC. Use-cases align to the London Health Data Strategy and long term condition priorities, as well as national programmes such as CORE20PLUS5, and are proposed here following early discussions with London ICBs. An overarching objective for any work is to build a reproducible code base that is sharable between ICBs, and which can be optimised for local uses/dashboards, or used to create aggregated pan-London insights.</p>
+<p>Prior to any of the below projects being conducted, SDE/AIC resources are also available to help ICBs migrate their current pipelines and dashboards into the new LDS data environments (<a href="#fig-aic-objectives" class="quarto-xref">Figure&nbsp;2</a>).</p>
+<section id="systematic-measurement-of-group-and-individual-health-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="systematic-measurement-of-group-and-individual-health-inequality">Systematic measurement of group and individual health inequality</h3>
+</section>
+<section id="cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example" class="level3">
+<h3 class="anchored" data-anchor-id="cardiovascular-disease-prevention-through-decision-intelligence-hypertension-as-an-example">Cardiovascular disease prevention through decision intelligence (Hypertension as an example)</h3>
+</section>
+<section id="actionable-admission-risk-stratification" class="level3">
+<h3 class="anchored" data-anchor-id="actionable-admission-risk-stratification">Actionable admission risk stratification</h3>
+</section>
+<section id="joining-up-cancer-pathways" class="level3">
+<h3 class="anchored" data-anchor-id="joining-up-cancer-pathways">Joining up cancer pathways</h3>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+</section>
 </section>
 
 </main>
