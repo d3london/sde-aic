@@ -157,7 +157,7 @@ Health inequality is traditionally measured and visualised as a comparison of pr
 </ol>
 The precise contribution of factors to outcomes can be measured and understood in a multivariate statistical model. Overall, the presence and magnitude of indicators can be used to visualise, monitor, and explain different types of inequality, including through comparison of groups and individuals to 'what is expected' in a background population. The outcome is an increase in actionability, with identification of modifiable determinants of inequality ( = inequity) for small groups and individuals.
 
-**METHODS:** The below shows an example workflow for Diabetes Mellitus, but can be applied to any long-term condition (not including cancer). 
+**METHODS:** The below shows an example workflow for a long-term condition (not including cancer). 
 
 ```{mermaid}
 %%| fig-width: 6
@@ -184,20 +184,37 @@ flowchart LR
     class A,B,C,D,E gray
 ```
 
-**OUTPUTS:** The primary output of this project would be a code-base that takes a cohort definition and a list of indicators as an input, and can be run to produce summary tables and statistics for groups and individual patients (where required). The code can be adapted by ICBs and used to support local dashboards. Code can be used for higher-level interval reporting and monitoring for the London region.  
-
+**OUTPUTS:** The primary output of this project would be a code-base that engineers cohorts from disease definitions, produces indicators for a given disease, and produces summary tables and statistics for groups and individual patients (where required). The code can be adapted by ICBs and used to support local dashboards. Code can be used for higher-level interval reporting and monitoring for the London region.  
 
 
 ### Cardiovascular disease prevention through decision intelligence
 
+**AIM:** To enhance descriptive population health management with explainable predictive analytics and clinical guideline-based decision support systems, across cardiovascular related co-morbidities (Hypertension, diabetes, chronic kidney disease).  
 
+**SUMMARY:** 
 
-### Actionable admission risk stratification
+**METHODS:**
 
+**OUTPUTS:**
 
 
 ### Joining up cancer pathways
 
+**AIM:**
+
+**SUMMARY:** 
+
+**METHODS:**
+
+**OUTPUTS:**
 
 
-### 
+### Secondary: Returning 'last mile' insights to primary care systems
+
+**AIM:**
+
+**SUMMARY:** 
+
+**METHODS:**
+
+**OUTPUTS:**
