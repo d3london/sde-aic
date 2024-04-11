@@ -8,7 +8,7 @@ manuscript:
 format:
   html:
     comments:
-      hypothesis: true
+      hypothesis: false
     mermaid:
       theme: neutral
   docx: default

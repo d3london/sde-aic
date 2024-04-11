@@ -137,8 +137,10 @@
   pdfcreator={LaTeX via pandoc}}
 
 \title{London SDE/AIC Programme: Introduction and Proposed Use-Cases}
-\author{Dr.~Joe Zhang \and Prof.~James Teo \and Dr.~Jorge
-Cardoso \and Jawad Chaudhry \and Sigal Hachlili}
+\author{Dr.~Joe Zhang \emph{(Head of Data Science)} \and Prof.~James Teo
+\emph{(Clinical Director AI \& Data)} \and Dr.~Jorge Cardoso
+\emph{(Chief Technology Officer)} \and Jawad Chaudhry \emph{(Programme
+Lead)} \and Sigal Hachlili \emph{(Director of AI, Data \& Digital)}}
 \date{}
 
 \begin{document}
@@ -154,7 +156,7 @@ programme for its latest phase: to extend AI technologies and analytics
 capabilities to stakeholders and data environments across London. This
 document summarises the latest state of planning for the programme, as
 an aid to internal and external stakeholders including Integrated Care
-Boards and the wider London NHS ecosystem.
+Boards (ICB) and the wider London NHS ecosystem.
 
 \subsection{What is the London SDE?}\label{what-is-the-london-sde}
 
@@ -181,9 +183,9 @@ Health Data Strategy, coalescing around three components
   environments for both research and NHS users.
 \item
   \textbf{DiscoverNOW Research/Analytics Environment}: run by Imperial
-  College Healthcare Partners, DiscoverNOW supports governance and
-  operation of secure research environments for academic, commercial,
-  and NHS research and analytics.
+  College Healthcare Partners in North-West London, DiscoverNOW supports
+  governance and operation of secure research environments for academic,
+  commercial, and NHS research and analytics.
 \item
   \textbf{London AI Centre (AIC)}: a national centre of excellence for
   applied data science and AI, the AIC provides frontier technology for
@@ -196,7 +198,7 @@ Health Data Strategy, coalescing around three components
 
 \centering{
 
-\includegraphics[width=6in,height=3.97in]{index_files/figure-latex/mermaid-figure-4.png}
+\includegraphics[width=6in,height=4.23in]{index_files/figure-latex/mermaid-figure-4.png}
 
 }
 
@@ -208,7 +210,7 @@ Interoperability Platform.}
 \end{figure}%
 
 \textsubscript{Source:
-\href{https://d3london.github.io/sde_aic_docs/index.qmd.html}{Article
+\href{https://d3london.github.io/sde_aic_phase0/index.qmd.html}{Article
 Notebook}}
 
 \subsection{Technology and objectives}\label{technology-and-objectives}
@@ -229,8 +231,8 @@ contribution includes the following:
   these secure enclaves without the need to physically transfer data.
   FLIP is presently installed in four major London Trusts. Integrating
   FLIP into the SDE will enable hospital data (such as cancer data) to
-  be surfaced into the LDS, and multi-modal capabilities to support
-  research in precision healthcare.
+  be surfaced into the LDS, and enable multi-modal data access to
+  support research in precision healthcare.
 \item
   \textbf{CogStack}: As an advanced natural language processing
   platform, CogStack can turn the large quantities of health information
@@ -265,20 +267,37 @@ objectives. FLIP = Federated Learning and Interoperability Platform; ML
 \end{figure}%
 
 \textsubscript{Source:
-\href{https://d3london.github.io/sde_aic_docs/index.qmd.html}{Article
+\href{https://d3london.github.io/sde_aic_phase0/index.qmd.html}{Article
 Notebook}}
 
-Of relevance to ICBs, resources are available to support migration of
-existing analytics into LDS Snowflake `Sandpits', and constructing
-standard patient phenotype/cohort using definitions hosted on a London
-terminology server. This will support building more complex reproducible
-analytics/machine learning pipelines, and delivery of `last mile'
-insights to clinicians. As the LDS ICB environments share a common data
-model, any pipelines created in collaboration with a single ICB, can be
-adapted and used for any other ICB (or deployed across multiple
-environments to create pan-London insights). This will also facilitate
-shared terminologies, and validating/versioning/serving NHS-owned
-machine learning models across regions.
+As part of the SDE programme, resources from the AIC (including in
+clinical informatics, analytics engineering, and data science/machine
+learning) are available to support:
+
+\begin{itemize}
+\tightlist
+\item
+  Migration of existing ICB analytics into LDS `Sandpits';
+\item
+  Building pipelines into common data models, including OMOP;
+\item
+  Constructing common definitions for patient cohorts/phenotypes;
+\item
+  Building and maintaining more complex reproducible analytics/machine
+  learning pipelines;
+\item
+  Application of clinical domain expertise to deliver `last mile'
+  insights to clinicians;
+\item
+  Monitoring and evaluating real-world impacts in data-driven pathways.
+\end{itemize}
+
+As the LDS ICB environments share a common data model, any pipelines
+created in collaboration with an ICB can be adapted and used for any
+other ICB (or deployed across multiple environments to create pan-London
+insights). This will also facilitate the use of shared terminologies,
+and validating / versioning / serving NHS-owned machine learning models
+across regions.
 
 \subsection{Proposed use-cases}\label{proposed-use-cases}
 
@@ -288,8 +307,8 @@ ICB/NHS analytics teams and the AIC/SDE team. Use-cases align to the
 London Health Data Strategy and long term condition priorities, as well
 as national programmes such as CORE20PLUS5, and are proposed here
 following early discussions with London ICBs. An overarching objective
-for any work is to build a code base that can be shared between ICBs and
-improved collaboratively.
+for any work is to build a code base for reproducible analytics that can
+be shared between ICBs, and which can be improved collaboratively.
 
 \subsubsection{Systematic measurement of group and individual health
 inequality}\label{systematic-measurement-of-group-and-individual-health-inequality}
@@ -316,17 +335,21 @@ define `indicators' of unequal disease, diagnosis, and treatment
 pathways. For example, in an individual with Diabetes Mellitus,
 indicators of inequality can include:
 
-Diabetes surfacing at an early age;
-
-Diagnosis in proximity to cardiovascular risk factor co-morbidities;
-
-Diagnosis at a \emph{late} age but with more severe disease, as measured
-by HbA1c or presence of end-organ complications;
-
-Reduced health engagement/encounters/treatment compared to what is
-expected based on disease severity;
-
-Shorter time to complications and mortality following diagnosis.
+\begin{itemize}
+\tightlist
+\item
+  Diabetes surfacing at an early age;
+\item
+  Diagnosis in proximity to cardiovascular risk factor co-morbidities;
+\item
+  Diagnosis at a \emph{late} age but with more severe disease, as
+  measured by HbA1c or presence of end-organ complications;
+\item
+  Reduced health engagement/encounters/treatment compared to what is
+  expected based on disease severity;
+\item
+  Shorter time to complications and mortality following diagnosis.
+\end{itemize}
 
 The precise contribution of factors to outcomes can be measured and
 understood in a multivariate statistical model. Overall, the presence
@@ -340,10 +363,10 @@ individuals.
 \textbf{METHODS:} The below shows an example workflow for a long-term
 condition (not including cancer).
 
-\includegraphics[width=6in,height=1.41in]{index_files/figure-latex/mermaid-figure-5.png}
+\includegraphics[width=6in,height=1.39in]{index_files/figure-latex/mermaid-figure-5.png}
 
 \textsubscript{Source:
-\href{https://d3london.github.io/sde_aic_docs/index.qmd.html}{Article
+\href{https://d3london.github.io/sde_aic_phase0/index.qmd.html}{Article
 Notebook}}
 
 \textbf{OUTPUTS:} The primary output of this project would be a
