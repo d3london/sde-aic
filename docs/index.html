@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-<p><em>Version 0.5 (last updated 2024 Apr 7)</em></p>
+<p><em>Version 0.6 (last updated 2024 Apr 18)</em></p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>The <a href="https://www.aicentre.co.uk/">London AI Centre</a> (AIC) has been commissioned as part of the London Secure Data Environment (SDE) programme for its latest phase: to extend AI technologies and analytics capabilities to stakeholders and data environments across London. This document summarises the latest state of planning for the programme, as an aid to internal and external stakeholders including Integrated Care Boards (ICB) and the wider London NHS ecosystem.</p>
@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The London Secure Data Environment (SDE) is a pan-London NHS programme that is part of a national effort to enable secure and more powerful analytics for NHS, academic, and commercial users. Uniquely amongst regional peers, the London SDE does not focus on a single research platform. Rather, it places a focus on developing data infrastructure and capabilities that can support population health, care providers, and commissioners. This is in addition to building data environments that enable commercial research and development partnerships.</p>
 <p>The SDE is led by <strong>OneLondon</strong>, as part of an overarching London Health Data Strategy, coalescing around three components (<a href="#fig-sde-summary" class="quarto-xref">Figure&nbsp;1</a>):</p>
 <ol type="1">
-<li><p><strong>London Data Service (LDS)</strong>: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data warehouses and secure analytics environments for both research and NHS users.</p></li>
+<li><p><strong>London Data Service (LDS)</strong>: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data within secure analytics environments for both research and NHS users.</p></li>
 <li><p><strong>DiscoverNOW Research/Analytics Environment</strong>: run by Imperial College Healthcare Partners in North-West London, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.</p></li>
 <li><p><strong>London AI Centre (AIC)</strong>: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment (CogStack), federated analytics (FLIP), and deployment of machine learning tools, as well as expertise in health data and advanced analytics.</p></li>
 </ol>
@@ -222,9 +222,9 @@ Figure&nbsp;1: Summary of SDE components and data flows. Each London ICB is prov
 <h2 class="anchored" data-anchor-id="technology-and-objectives">Technology and objectives</h2>
 <p>The contribution from the London AIC consists of technology deployment and supporting expertise, that enable a number of objectives (<a href="#fig-aic-objectives" class="quarto-xref">Figure&nbsp;2</a>) over the two year programme. This contribution includes the following:</p>
 <ol type="1">
-<li><p><strong>Federated Learning and Interoperability Platform (FLIP)</strong>: Developed and tested over four years, FLIP consists of (a) secure data environments within NHS hospital Trusts for multi-modal imaging data, imaging metadata, and structured health record data in a common data model; and (b) a mechanism to query data and train AI models across these secure enclaves without the need to physically transfer data. FLIP is presently installed in four major London Trusts. Integrating FLIP into the SDE will enable hospital data (such as cancer data) to be surfaced into the LDS, and enable multi-modal data access to support research in precision healthcare.</p></li>
+<li><p><strong>Federated Learning and Interoperability Platform (FLIP)</strong>: FLIP consists of (a) secure data environments within NHS hospital Trusts for multi-modal imaging data, imaging metadata, and structured health record data in the OMOP common data model; and (b) a mechanism to query data and train AI models across these secure enclaves without the need to physically transfer data. FLIP is presently installed in four major London Trusts. Integrating FLIP into the SDE will enable hospital data (such as cancer data) to be surfaced into the LDS, and enable access to multi-modal data (such as DICOM imaging and digital pathology) for research in precision healthcare.</p></li>
 <li><p><strong>CogStack</strong>: As an advanced natural language processing platform, CogStack can turn the large quantities of health information that are found in narrative text, into structured and analysable data. Currently actively used in Trusts to assist with clinical coding from notes and clinic letters, CogStack can surface secondary care and cancer pathway data, and previously unseen primary care data, into the SDE ecosystem.</p></li>
-<li><p><strong>AIC Data/AI Hub</strong>: The AIC hosts substantial health data and AI implementation expertise, that will provide practical support in data engineering, clinical informatics, data science, and machine learning (ML) development and deployment. Primary aims are to (a) help Integrated Care Boards (ICB) migrate data pipelines and analytics onto the LDS, (b) produce reproducible analytics pipelines for data science and predictive analytics capabilities, (c) work together to make ICBs self-sufficient in these capabilities.</p></li>
+<li><p><strong>AIC Data/AI Hub</strong>: The AIC hosts substantial health data and AI implementation expertise, that will provide practical support in data engineering, clinical informatics, data science, and machine learning (ML) development and deployment. Primary aims are to (a) help Integrated Care Boards (ICB) migrate data pipelines and analytics into common data models and terminologies within LDS environments; (b) extend these into reproducible pipelines for data science and predictive analytics deployment; and (c) work together to make ICBs self-sufficient in these capabilities. The AIC will also support the adoption and roll-out of the OMOP Common Data Model.</p></li>
 </ol>
 <div class="cell" data-fig-width="6" data-layout-align="default">
 <div class="cell-output-display">
@@ -258,6 +258,8 @@ Figure&nbsp;1: Summary of SDE components and data flows. Each London ICB is prov
                 cohort pipelines"]
     C2 ==&gt; C3["Building reproducible analytics/ML 
               pipelines with sharable code base"]
+    HUB ==&gt; C4["Standardising London SDE data
+                into OMOP common data model"]
 
     classDef yellow fill:#ed6, stroke:#333, stroke-width:1px
     classDef lightorange fill:#fb3, stroke:#333, stroke-width:1px
@@ -272,7 +274,7 @@ Figure&nbsp;1: Summary of SDE components and data flows. Each London ICB is prov
     class COG lightorangebase
     class B1,B2,B3 lightorange
     class HUB orangebase
-    class C1,C2,C3 orange
+    class C1,C2,C3,C4 orange
 </pre>
 </div>
 </div>
@@ -288,9 +290,10 @@ Figure&nbsp;2: Summary of AIC work components and objectives. FLIP = Federated L
 <li>Migration of existing ICB analytics into LDS ‘Sandpits’;</li>
 <li>Building pipelines into common data models, including OMOP;</li>
 <li>Constructing common definitions for patient cohorts/phenotypes;</li>
-<li>Building and maintaining more complex reproducible analytics/machine learning pipelines;</li>
+<li>Building, deploying, and maintaining complex reproducible analytics/machine learning pipelines;</li>
 <li>Application of clinical domain expertise to deliver ‘last mile’ insights to clinicians;</li>
-<li>Monitoring and evaluating real-world impacts in data-driven pathways.</li>
+<li>Monitoring and evaluating real-world impacts in data-driven pathways;</li>
+<li>Skill transfer to embed advanced analytics capabiltiies in ICB teams.</li>
 </ul>
 <p>As the LDS ICB environments share a common data model, any pipelines created in collaboration with an ICB can be adapted and used for any other ICB (or deployed across multiple environments to create pan-London insights). This will also facilitate the use of shared terminologies, and validating / versioning / serving NHS-owned machine learning models across regions.</p>
 </section>
