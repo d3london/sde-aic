@@ -7,14 +7,14 @@ authors:
     affiliation: London AI Centre / SDE
   - name: Dr. Jorge Cardoso _(Chief Technology Officer)_
     affiliation: London AI Centre / SDE
-  - name: Jawad Chaudhry _(Programme Lead)_
+  - name: Jawad Chaudhry _(AI Programme Lead)_
     affiliation: London AI Centre / SDE
   - name: Sigal Hachlili _(Director of AI, Data & Digital)_
     affiliation: London AI Centre / SDE
 lightbox: false
 ---
 
-_Version 0.6 (last updated 2024 Apr 18)_
+_Version 0.9 (last updated 2024 Apr 30)_
 
 ## Introduction
 
@@ -142,76 +142,63 @@ As the LDS ICB environments share a common data model, any pipelines created in 
 
 ## Proposed use-cases
 
-The following use-cases are _examples_ of analytics projects that can be supported within the SDE ecosystem, in collaboration between ICB/NHS analytics teams and the AIC/SDE team. Use-cases align to the London Health Data Strategy and long term condition priorities, as well as national programmes such as CORE20PLUS5, and are proposed here following early discussions with London ICBs. An overarching objective for any work is to build a foundation for reproducible analytics that can be shared across the region.
-
-### Systematic measurement of group and individual health inequality 
-
-**AIM:** To systematically surface multiple dimensions of health inequality across sociodemographic / geospatial groups and individual patients, and to monitor this data continuously across key long-term conditions.
-
-**BACKGROUND:** Health inequality refers to measurable differences in health outcomes and determinants between individuals or groups (e.g. morbidity, co-morbidity, disease complications/death, healthcare access, disease screening, treatment delivery). Where individuals and groups experience health inequality, the principle of health _equity_ emphases the importance of reducing disparities by modifying outcome determinants that are unfairly distributed. 
-
-Health inequality is traditionally measured and visualised as a comparison of prevalence/incidence across different population groups. While helpful for broad insights, this offers limited understanding of complex individual circumstances. This type of measurement can be extended to individual patients, by using clinical domain knowledge to define 'indicators' of unequal disease, diagnosis, and treatment pathways. For example, in an individual with Diabetes Mellitus, indicators of inequality can include:
-
-(1) Diabetes surfacing at an early age;
-
-(2) Diagnosis in proximity to cardiovascular risk factor co-morbidities;
-
-(3) Diagnosis at a _late_ age but with more severe disease, as measured by HbA1c or presence of end-organ complications;
-
-(4) Reduced health engagement/encounters/treatment compared to what is expected based on disease severity;
-
-(5) Shorter time to complications and mortality following diagnosis.
-
-The precise contribution of factors to outcomes can be measured and understood in multivariate statistical models. Overall, the presence and magnitude of indicators can be used to visualise, monitor, and explain different types of inequality, including through comparison of groups and individuals to 'what is expected' in a background population. The outcome is an increase in actionability, with identification of modifiable determinants of inequality ( = inequity) for small groups and individuals.
-
-**APPROACH:** Broadly, work would fall into three stages. The first includes defining shared terminologies, concepts, and indicators that cover long-term conditions of interest. Secondly, existing descriptions of health inequality can be migrated onto the LDS environment using shared terminologies and concepts, such that any condition can be repreducibly visualised across multiple dimensions and 'cuts'. 
-
-Finally, this work would be extended to encompass specific inequality indicators and statistical insights, at a small group and individual level. (@fig-rep-pipelines-inequality) shows outcomes in an example workflow for long-term conditions (not including cancer). 
+The following three use-cases are _examples_ of analytics projects that can be supported within the SDE ecosystem, in collaboration between ICB/NHS analytics teams and the AIC/SDE team. Use-cases align to the London Health Data Strategy and long term condition priorities, as well as national programmes such as CORE20PLUS5, and are proposed here following early discussions with London ICBs. An objective for any work is to build upwards from a foundation of reproducible pipelines, towards data science and predictive analytics (@fig-general-framework).
 
 ```{mermaid}
 %%| fig-width: 6
-%%| label: fig-rep-pipelines-inequality
-%%| fig-cap: "Outcomes in development workflow. LTC = long-term conditions."
-flowchart LR
+%%| label: fig-general-framework
+%%| fig-cap: "General framework for use-cases: moving towards advanced analytics"
+flowchart BT
     A["Shared definitions of terminologies for
-        LTC and supporting concepts"] ==> A1["Reproducible pipelines to summarise
-                                            LTC by group/geospatial features"]
+        LTC and supporting concepts"]
 
-    A1 ==> A2["Given condition as input:
-          Ability to surface summary dashboards
-          with group/geospatial comparison"]
+    B["Shared cohort building code with
+        key subgroup stratification"]
 
-    B["Shared definitions of inequality indicators
-      based on domain knowledge and evidence"] ==> B1["Multivariate regression and survival
-                                                  models to understand significance of
-                                                  inequality indicators on outcomes"]
-
-    A ==> B1
-
-    A1 ==> B2
-
-    B1==>B2["Given condition and group/individual as input: 
-              Ability to surface inequality status vs 
-              average of relevant baseline population"]
+    C["Multivariate adjusted insights
+     and understanding of determinants"]
+    
+    D["Predictive analytics pathways 
+    with decision support and evaluation"]
+    
+    A --> B --> C --> D
 
     classDef gray fill:#fff, stroke:#333, stroke-width:1px
 
-    class A,A1,A2,B,B1,B2 gray
+    class A,B,C,D gray
 ```
 
-The primary output of this project would be a code base that engineers cohorts from disease definitions, produces indicators for a given disease, and produces summary tables and statistics for groups and individual patients (where required). The code can be adapted by ICBs and used to support local dashboards and pathways. Code can be used for higher-level interval reporting and monitoring for the London region.
+### Systematic measurement of group and individual health inequality 
+
+**AIM:** To systematically surface multiple dimensions of health inequality across sociodemographic / geospatial groups, and across individual patients, and to monitor this data continuously across key long-term conditions.
+
+**SUMMARY:** Health inequality refers to measurable differences in health outcomes and determinants between individuals or groups (e.g. morbidity, co-morbidity, disease complications/death, healthcare access, disease screening, treatment delivery). Where there is health inequality, the principle of health _equity_ emphasises the recognition and reduction of disparities in determinants.
+
+Health inequality is traditionally measured and visualised as a comparison of prevalence/incidence across different population groups. While helpful for broad insights, this offers limited understanding of complex individual circumstances. Instead, measurement of inequalities can be extended to individual patients, by using clinical domain knowledge to define 'indicators' of unequal disease, diagnosis, and treatment pathways. For example, in an individual with a long-term condition (LTC), indicators of inequality can include:
+
+|                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------- |
+| 1. LTC surfacing at an early age (@fig-onset-time)                                                                                 |
+| 2. LTC in proximity to relevant co-morbidities (e.g. cardiovascular risk factors)                                                      |
+| 3. Diagnosis at a _late_ age but with more severe disease (e.g. in Diabetes, measured by HbA1c or presence of end-organ complications) |
+| 4. Reduced health engagement/encounters/treatment compared to what is expected based on disease severity                               |
+| 5. Shorter time to complications and mortality following diagnosis                                                                     |
+
+The contribution of individual indicators to later outcomes can be measured in multivariate statistical models, and used to understand inequality determinants for any given individual. Determinants can be visualised for small specific groups, or individuals, with comparison to 'what is expected' in a background population. The result is an increase in actionability.
+
+![Inequality in age of onset across demographic groups and deprivation, generated automatically through input of condition and group for stratification](media/onset_over_time.jpg){width=60%, #fig-onset-time}
+
+As per the framework described in (@fig-general-framework), the initial stage of work will include defining shared terminologies, concepts, and indicators that cover long-term conditions of interest. Secondly, existing descriptions of health inequality can be migrated onto the LDS environment using shared terminologies and concepts, such that any condition can be repreducibly visualised across multiple dimensions and 'cuts'. This foundation can be extended to encompass specific inequality indicators and statistical insights, at a small group and individual level, and the use of these insights to identify patients at greatest risk of health inequality, or those with addressable inequities.  
 
 ### Cardiovascular disease prevention through decision intelligence
 
-**AIM:** To enhance descriptive population health management with explainable predictive analytics and clinical guideline-based decision intelligence systems, across cardiovascular related co-morbidities (including hypertension, diabetes, chronic kidney disease).  
+**AIM:** To enhance descriptive population health management with explainable predictive analytics and clinical guideline-based "decision intelligence" systems, across cardiovascular related co-morbidities (including hypertension, diabetes, chronic kidney disease).  
 
-**BACKGROUND:** The spectrum of cardiovascular long-term conditions and associated risk factors is wide, and includes hypertension, diabetes, obesity, high cholesterol, ischaemic heart disease, stroke, and chronic kidney disease, as well as dementia and heart failure. The burden of such diseases is high. [Heart disease](https://cks.nice.org.uk/topics/cvd-risk-assessment-management/background-information/burden-of-cvd/) alone causes a quarter of deaths in the UK, with direct costs to the healthcare system estimated at £9 billion by the British Heart Foundation. Cardiovascular disease is seen as a [priority area for use of data](https://imperialcollegehealthpartners.com/portfolio/onelondon/) across OneLondon patient and public engagement.
-
-There is robust aggregate understanding of cardiovascular long-term conditions in London, through prevalence reporting and Quality Outcome Framework (QOF) indicators. Existing ICB dashboards (@fig-icb-hypertension) routinely show how a practice or a system are performing relative to their peers. However, while indicating priority areas for action, such reporting has limitations. These include inability to surface individual patients and/or direct actions, lack of adjustment for demographics and other variables, and consideration of long-term conditions in isolation (whereas multi-morbidity changes the entire risk profile and urgency of response for individuals).
+**SUMMARY:** The spectrum of cardiovascular long-term conditions (LTC) and associated risk factors is wide, and includes hypertension, diabetes, obesity, high cholesterol, ischaemic heart disease, stroke, and chronic kidney disease, as well as dementia, atrial fibrillation, and heart failure. The burden of such diseases is high. [Heart disease](https://cks.nice.org.uk/topics/cvd-risk-assessment-management/background-information/burden-of-cvd/) alone causes a quarter of deaths in the UK, with direct costs to the healthcare system estimated at £9 billion by the British Heart Foundation. Cardiovascular disease is seen as a [priority area for use of data](https://imperialcollegehealthpartners.com/portfolio/onelondon/) across OneLondon patient and public engagement.
 
 ![Existing ICB dashboard for Hypertension](media/example_dashboard.jpg){width=60%, #fig-icb-hypertension}
 
-Some of these limitations are being addressed by existing work in London pathfinder programmes, and in other regions such as Greater Manchester, which are moving towards electronic identification of patients who may be actioned via pre-agreed clinical pathways (@fig-simple-pathway-action).
+In London ICBs, there is robust aggregate understanding of LTC, through prevalence reporting and Quality Outcome Framework (QOF) indicators. Existing ICB dashboards (@fig-icb-hypertension) show how a practice or a system are performing relative to their peers. However, such reporting has limitations, including: (1) lack of adjustment for demographics and other confounding variables; (2) difficulty in surfacing individual patients with direct actions; and (3) lack of consideration of co-morbidities - as multi-morbidity tends to change the risk profile and urgency of response for individuals. Some of these limitations are being addressed by existing work in London pathfinder programmes, and in other regions such as Greater Manchester, which are moving towards electronic identification of patients who may be actioned via pre-agreed clinical pathways (@fig-simple-pathway-action).
 
 ```{mermaid}
 %%| fig-width: 6
@@ -238,80 +225,30 @@ flowchart LR
     class A1,B1,C1 gray
 ```
 
-A previous collaboration between the AIC and North-East London ICB was able to develop precise cardiovascular risk prediction models for individuals, using explainable machine-learning algorithms and the linked patient health record. Actionable factors could also be highlighted in patients with high risk, with their relative importance explained through statistical modelling to enhance explainability (@fig-htn-actionable).
+These limitations can be surmounted through using richer data to generate personalised risk profiles for individual patients (rather than aggregate group summaries). A previous collaboration between the AIC and North-East London ICB was able to develop precise cardiovascular risk prediction models for individuals, using explainable machine-learning algorithms and the linked patient health record. Actionable factors could also be highlighted in patients with high risk, with their relative importance explained through statistical modelling to enhance explainability (@fig-htn-actionable).
 
 ![Actionable factors (including follow-up, treatment, blood pressure control) and association of features with adverse outcome in high risk hypertensive patients](media/htn_actionable.jpg){width=60%, #fig-htn-actionable}
 
-**APPROACH:**  This use-case will extend the above work, by combining multivariate statistics and machine learning for risk prediction, with robust decision systems that are grounded in evidence and clinical guidelines. Broadly, work would consist of the following components:
+Predictive analytics alone is not a solution. Being "high risk" alone may be difficult to action clinically, and may not lead to improved care or prevention. Instead, it is possible to use clinical guidelines and domain knowledge to identify specific optimisation or preventative actions (much like @fig-simple-pathway-action) but systematically, and on a larger scale. The combination of personalised risk profiles and personalised actionability for supporting decisions, is referred to as "decision intelligence".
 
-(1) Development of shared terminologies, concepts, and features, used to characterise patients with any single or combination of relevant long-term condition.
+This use-case will again aim to develop shared terminologies, features, and code to enhance current pipelines and dashboards. In addition, collaboration extend these through:
 
-(2) Development of shared code base to ingest these definitions, and construct / describe / visualise cohorts as extension of existing dashboards. This code can be built as part of migration of existing pipelines into the LDS environment. 
+(1) Computerisation of Quality Outcomes Framework targets and clinical guidelines, in conjunction with local clinical teams, to develop safe decision logic for use in the "effector" arm.
 
-(3) Computerisation of Quality Outcomes Framework targets and clinical guidelines, in conjunction with local clinical teams, to develop safe decision logic for use in the "effector" arm.
+(2) Use of CogStack to extract additional valuable context and missing codes from unstructured text.
 
-(4) Use of CogStack to extract additional valuable context and missing codes from unstructured text.
+(3) Use rich features in the EHR to develop statistical and machine learning models for predicting and understanding risk of progression across range of cardiovascular morbidity and co-morbidity.
 
-(5) Development of statistical and machine learning models for predicting and understanding risk of progression across range of cardiovascular morbidity and co-morbidity.
+(4) For given patient's health record, understand actions (i.e. are there  actions available, and what are they) combined with explainable risks across multiple conditions (i.e. what are the highest risks for this patient and why).
 
-(6) For given patient's health record, understand actions (i.e. are there  actions available, and what are they) combined with explainable risks across multiple conditions (i.e. what are the highest risks for this patient and why).
+(5) Return individual patient insights and suggested actions to clinical systems
 
-This approach aims to generate **patient-centric decision intelligence** (@fig-patient-dec-int), where risk and possible actions are considered for a highly detailed representation of an individual, rather than of isolated conditions, or of large, aggregate groups of patients. Additional work is also being conducted to explore pushing 'last mile insights' directly to Electronic Health Record systems. Any systems will need to be evaluated and monitored for safety and fairness, with a process of training and handover to continuity teams following the end of this SDE programme phase.
-
-```{mermaid}
-%%| fig-width: 6
-%%| label: fig-patient-dec-int
-%%| fig-cap: "A linked and enriched patient healthcare record can support accurate risk prediction and prioritisation of useful actions."
-flowchart LR
-    A1[Demographics] ==> B["Personal health record"]
-
-    A2["Co-morbidities &
-        clinical features"] ==> B
-
-    A3["Drug prescription &
-        request history"] ==> B
-
-    A4["Encounter history in
-      primary/secondary care"] ==> B
-
-    A5["Laboratory results"] ==> B
-
-    A6["Clinical observations"] ==> B
-
-    A7["Unstructured record"] ==> B
-
-    A8["Indicators of lack of
-        access/service"] ==> B
-
-    B ==> C["Multivariate adjustment for endpoints:
-            (i.e. these are the key features
-            of importance in this patient)"]
-    B ==> D["Predictive analytics:
-            (i.e. this patient is high risk for
-            these complications over 3 years)"]
-    B ==> E["Computing via clinical guidelines & QOF:
-            (i.e. care for this patient can be optimised
-            by assessing the following actions)"]
-
-    C ==> Z["Patient-centric decision intelligence:
-            (i.e. this patient is high priority for
-            attention given their risk profile 
-            and potential actionability)"]
-
-    D ==> Z
-    E ==> Z
-
-    classDef white fill:#fff, stroke:#333, stroke-width:1px
-    classDef gray fill:#eee, stroke:#333, stroke-width:1px
-
-    class A1,A2,A3,A4,A5,A6,A7,A8,C,D,E white
-    class B,Z gray
-```
+Highly individualised patient profiles is the objective of "personalised care", and is required to move towards preventative healthcare. Additional work is being conducted to explore pushing insights directly to Electronic Health Records. Any deployed systems will need to be evaluated and monitored for safety and fairness, with a process of training and handover to continuity teams following the end of this SDE programme phase.
 
 
 ### Joining up cancer pathways
 
-**AIM:**
+**AIM:** To link cancer pathways (including screening, diagnosis, staging, and outcomes) across primary care and secondary care. To identify areas of inequality and late diagnosis, and to generate predictive insights for risk and screening recall.
 
 **BACKGROUND:** 
 
