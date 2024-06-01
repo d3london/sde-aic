@@ -38,7 +38,7 @@ website:
    
 format:
   html:
-    theme: cosmo
+    theme: zephyr
     mermaid:
       theme: neutral
 

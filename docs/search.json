@@ -101,7 +101,7 @@
   {
     "objectID": "5_introduction.html",
     "href": "5_introduction.html",
-    "title": "Introduction to Use-Cases",
+    "title": "Use-Case Summary",
     "section": "",
     "text": "The following use-cases are examples of analytics projects that can be supported within the SDE ecosystem, conducted in collaboration between ICB/NHS analytics teams and the AIC/SDE team. These population health use-cases align to the London Health Data Strategy and long term condition priorities, as well as national programmes such as CORE20PLUS5, and are proposed here following early discussions with London ICBs. An objective for any work is to build upwards from a foundation of reproducible pipelines, towards data science and predictive analytics (Figure 1).\nflowchart BT\n    A[\"Shared definitions of terminologies for\n        LTC and supporting concepts\"]\n\n    B[\"Shared cohort building code with\n        key subgroup stratification\"]\n\n    C[\"Multivariate adjusted insights\n     and understanding of determinants\"]\n    \n    D[\"Predictive analytics pathways \n    with decision support and evaluation\"]\n    \n    A --&gt; B --&gt; C --&gt; D\n\n    classDef gray fill:#fff, stroke:#333, stroke-width:1px\n\n    class A,B,C,D gray\n\n\n\n\nFigure 1: General framework for use-cases: moving towards advanced analytics",
     "crumbs": [
@@ -112,7 +112,7 @@
   {
     "objectID": "5_introduction.html#research-and-life-sciences",
     "href": "5_introduction.html#research-and-life-sciences",
-    "title": "Introduction to Use-Cases",
+    "title": "Use-Case Summary",
     "section": "Research and Life Sciences",
     "text": "Research and Life Sciences\nWhile not specified here, the SDE / AIC programme will also enable wider research capabilities in precision medicine and life sciences. This is the premise of the national Secure Data Environment programme, promoting safe and privacy-assured access to NHS data for developing our understanding of disease, outcomes, and treatments. While national platforms such as NHS DigiTrials are able to support research and clinical trials at a national scale, AI Centre technologies will enable access to far deeper pools of health data, including multi-modal data, test results, and biomarkers. This means that patients can be represented in far greater detail, opening the door to a new generation of precision medicine research. Ultimately, developing SDE capabilties within the NHS ensures that value from research and discoveries can pass back to NHS care providers and patients.",
     "crumbs": [

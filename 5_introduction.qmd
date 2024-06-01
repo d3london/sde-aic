@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Use-Cases" 
+title: "Use-Case Summary" 
 lightbox: false
 ---
 
