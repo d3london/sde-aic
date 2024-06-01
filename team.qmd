@@ -11,5 +11,12 @@ Dr. Joe Zhang - **Head of Data Science**
 
 Dr. Jorge Cardoso - **Chief Technology Officer / FLIP Lead**
 
-Sigal Hachlili - **Director of AI, Data, and Digital Innovation**
+Marc Modat - **Research Engineer (FLIP)**
 
+Mcanroe Fernandes - **Data Analyst**
+
+Paul Wright - **Imaging Data Lead**
+
+Rokas Vistartas - **Lead Data Analyst (OMOP)**
+
+Sigal Hachlili - **Director of AI, Data, and Digital Innovation**

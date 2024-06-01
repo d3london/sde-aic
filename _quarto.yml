@@ -42,8 +42,5 @@ format:
     mermaid:
       theme: neutral
 
-execute:
-  freeze: true
-
 
 
