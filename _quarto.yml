@@ -4,6 +4,8 @@ project:
 
 website:
   title: "London SDE / AIC Programme"
+  navbar:
+    background: secondary
   sidebar: 
     style: "docked"
     search: false
