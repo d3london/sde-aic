@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>London SDE / AIC Programme - Introduction to the London AIC/SDE Programme</title>
+<title>London SDE / AIC Programme - Measurement of Group and Individual Health Inequalities</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,10 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<meta name="mermaid-theme" content="neutral">
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -83,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">OVERVIEW</a></li><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./5_introduction.html">USE-CASES</a></li><li class="breadcrumb-item"><a href="./6_inequalities.html">Health Inequalities</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -111,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -169,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./6_inequalities.html" class="sidebar-item-text sidebar-link">
+  <a href="./6_inequalities.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Health Inequalities</span></a>
   </div>
 </li>
@@ -213,9 +209,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">OVERVIEW</a></li><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./5_introduction.html">USE-CASES</a></li><li class="breadcrumb-item"><a href="./6_inequalities.html">Health Inequalities</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction to the London AIC/SDE Programme</h1>
+<h1 class="title">Measurement of Group and Individual Health Inequalities</h1>
 </div>
 
 
@@ -232,86 +228,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Version 1.0 (last updated May 3 2024)</em></p>
-<p>The <a href="https://www.aicentre.co.uk/">London AI Centre</a> (AIC) has been commissioned as part of the London Secure Data Environment (SDE) programme for its latest phase: to extend AI technologies, multi-modal data enrichment, and analytics capabilities to stakeholders and data environments across London. This document summarises the latest state of planning for the programme, as an aid to internal and external stakeholders including Integrated Care Boards (ICB), primary and secondary care providers, research partners, and for the wider NHS ecosystem.</p>
-<section id="what-is-the-london-ai-centre" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-london-ai-centre">What is the London AI Centre?</h2>
-<p>The London Artificial Intelligence Centre for Value-Based Healthcare (London AI Centre) is a consortium of NHS and academic institutions led by Guy’s &amp; St Thomas’ Hospitals, King’s College London, and King’s College Hospital, in partnership with 10 NHS Trusts and 4 universities across England. The centre hosts development and implementation of data platforms and AI technologies, aiming to achieve better outcomes for patients’ diagnosis and treatment, improve clinical and operational workflows, and drive innovative healthcare research. This includes working within externally funded programmes through the NHS and academia, such as the London SDE.</p>
-</section>
-<section id="what-is-the-london-sde" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-london-sde">What is the London SDE?</h2>
-<p>The London Secure Data Environment (SDE) is part of a national programme to enable secure and more powerful analytics for NHS, academic, and commercial users. Uniquely amongst regional peers, the London SDE does not focus on a single research platform. Rather, it places a focus on developing data infrastructure and capabilities across the region to support population health, care providers, and commissioners. This is in addition to building data environments that enable commercial research and development partnerships.</p>
-<p>The SDE is led by <strong>OneLondon</strong>, as part of an overarching London Health Data Strategy, coalescing around three components (<a href="#fig-sde-summary" class="quarto-xref">Figure&nbsp;1</a>):</p>
-<ol type="1">
-<li><p><strong>London Data Service (LDS)</strong>: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data within secure analytics environments for both research and NHS users.</p></li>
-<li><p><strong>DiscoverNOW Research/Analytics Environment</strong>: run by Imperial College Healthcare Partners in North-West London, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.</p></li>
-<li><p><strong>London AI Centre (AIC)</strong>: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment (CogStack), federated analytics (FLIP), and deployment of machine learning tools, as well as expertise in health data and advanced analytics.</p></li>
-</ol>
-<div class="cell" data-fig-width="6" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-sde-summary" class="quarto-figure quarto-figure-center quarto-float anchored">
+<p><strong>AIM:</strong> To systematically surface multiple dimensions of health inequality across sociodemographic / geospatial groups, and across individual patients, and to monitor this data continuously across key long-term conditions.</p>
+<p><strong>SUMMARY:</strong> Health inequality refers to differences in health outcomes and determinants between individuals or groups (e.g.&nbsp;morbidity, co-morbidity, disease complications/death, healthcare access, disease screening, treatment delivery). The principle of health <em>equity</em> emphasises the recognition and reduction of disparities in determinants, resulting in more equal outcomes.</p>
+<p>It is important to understand what groups suffer from health inequality. This is traditionally measured and visualised as a comparison of disease and outcome prevalence/incidence across different population groups. While helpful for broad insights, this also offers limited understanding of complex individual circumstances and determinants. This use-case proposes that measurement of inequalities can be extended to individual patients, by using clinical domain knowledge to define ‘indicators’ of unequal disease, diagnosis, and treatment pathways. In an individual with a long-term condition (LTC), example indicators of inequality are shown below. The contribution of individual indicators to later outcomes can also be measured in multivariate statistical models, and used to understand determinants for any given individual.</p>
+<table class="table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>1. LTC surfacing at an early age (<a href="#fig-onset-time" class="quarto-xref">Figure&nbsp;1</a>)</td>
+</tr>
+<tr class="even">
+<td>2. LTC in proximity to relevant co-morbidities (e.g.&nbsp;cardiovascular risk factors)</td>
+</tr>
+<tr class="odd">
+<td>3. Diagnosis at a <em>late</em> age but with more severe disease (e.g.&nbsp;in Diabetes, measured by HbA1c or presence of end-organ complications)</td>
+</tr>
+<tr class="even">
+<td>4. Reduced health engagement/encounters/treatment compared to what is expected based on disease severity</td>
+</tr>
+<tr class="odd">
+<td>5. Shorter time to complications and mortality following diagnosis</td>
+</tr>
+</tbody>
+</table>
+<p>The objective is to move beyond describing inequality, to understanding individual/small group determinants, and to increase actionability. At this level, determinants can be visualised for small specific groups, or individuals, with comparison to ‘what is expected’ in a background population.</p>
+<div id="fig-onset-time" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sde-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-sde-summary">flowchart TD
-    d1[GP Surgeries] ==&gt;|Primary care data| LDS1[(London Data Service)]
-    d2[NHS Digital] ==&gt;|Commissioning datasets| LDS1
-    d3[Local data sources] ==&gt;|ICS data| ICB
-    AIC1["CogStack in Trusts"] ==&gt;|"Unstructured data 
-                                          (hospitals)
-                                          via federation"| LDS1
-    LDS1==&gt; AIC1a["CogStack in LDS"]
-    AIC1a==&gt;|"Unstructured data 
-                (primary care)"| LDS1
-    LDS1 ==&gt;|Linked data| NWL1[("DiscoverNOW Research &amp; 
-                                Analytics Environment")]
-
-    AIC2["AIC FLIP"] ==&gt; |"Multi-modal data 
-                                          (imaging metadata)
-                                          via federation"| NWL1
-    AIC2 ==&gt; |"Hospital cancer data
-                via federation"| LDS1
-    LDS1 ==&gt;|Linked data| ICB[("Integrated Care Board 'Sandpits' 
-                                x5: NEL/SEL/SWL/NWL/NCL")]
-
-    ICB &lt;==&gt;|Collaborative analytics| AIC3[AIC Data/AI Hub]
-    ICB &lt;==&gt;|Output Sharing| LDS2[Terminology/Code/Model Servers]
-    AIC3 &lt;==&gt;|Output Sharing| LDS2
-    NWL1 &lt;==&gt;|Output Sharing| LDS2
-
-    classDef green fill:#ab9, stroke:#333, stroke-width:1px
-    classDef blue fill:#89c, stroke:#333, stroke-width:1px
-    classDef bluegreen fill:#9ca, stroke:#333, stroke-width:1px
-    classDef lightblue fill:#ace, stroke:#333, stroke-width:1px
-    classDef red fill:#c89, stroke:#333, stroke-width:1px
-    classDef lightorange fill:#ca8, stroke:#333, stroke-width:1px
-    classDef orange fill:#d96, stroke:#333, stroke-width:1px
-    classDef purple fill:#a9c, stroke:#333, stroke-width:1px
-    classDef bluegray fill:#9ab, stroke:#333, stroke-width:1px
-    classDef gray fill:#fff, stroke:#333, stroke-width:1px
-
-    class LDS1,LDS2 blue
-    class ICB lightblue
-    class AIC1,AIC1a,AIC2,AIC3 orange
-    class NWL1,NWL2 bluegray
-    class d1,d2,d3 bluegreen
-</pre>
+<div aria-describedby="fig-onset-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/onset_over_time.jpg" class="img-fluid figure-img">
 </div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sde-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Summary of SDE components and data flows. Each London ICB is provisioned with its own data/analytics environment through the LDS. FLIP = Federated Learning and Interoperability Platform.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-onset-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Inequality in age of onset across demographic groups and deprivation, generated automatically through input of condition and group for stratification
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
-</section>
-<section id="patient-and-public-engagement" class="level2">
-<h2 class="anchored" data-anchor-id="patient-and-public-engagement">Patient and Public Engagement</h2>
-<p>To support the SDE programme, OneLondon has engaged in a wide range of deliberative public engagement, including hosting the first ever <a href="https://www.onelondon.online/citizens-summit/">Citizen’s Summit</a> to deliberate expectations and complex issues around the use of health and care data. In addition, patient and public outreach for uses of data are conducted through Integrated Care Boards, by patient committees in the AI Centre <a href="https://www.kch.nhs.uk/research/use-of-data-for-research/">NHS Trusts</a>, and by <a href="https://discover-now.co.uk/patients-and-public/">Discover-NOW</a>.</p>
+<p>The initial stage of work will include defining shared terminologies, concepts, and indicators that cover LTC of interest. Secondly, existing descriptions of health inequality can be migrated onto the LDS environment, and extended such that any condition can be reproducibly visualised across multiple dimensions and ‘cuts’. This foundation can be further extended to encompass specific inequality indicators and statistical insights, at a small group and individual level, and the use of these insights to identify patients at greatest risk of health inequality, or those with addressable determinants.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
