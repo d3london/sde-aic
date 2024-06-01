@@ -1,18 +1,46 @@
 project:
-  type: manuscript
+  type: website
   output-dir: docs
 
-manuscript:
-  article: index.qmd
-
+website:
+  title: "London SDE / AIC Programme"
+  sidebar: 
+    style: "docked"
+    search: false
+    contents:
+      - section: "OVERVIEW"
+        contents: 
+          - href: index.qmd
+            text: Introduction
+          - href: 1_objectives.qmd
+            text: Objectives
+          - href: 2_waysofworking.qmd
+            text: Ways of Working
+      - section: "TECHNOLOGY"
+        contents: 
+          - href: 3_flip.qmd
+            text: Federated Analytics
+          - href: 4_cogstack.qmd
+            text: CogStack                          
+      - section: "USE-CASES"
+        contents: 
+          - href: 5_introduction.qmd
+            text: Summary
+          - href: 6_inequalities.qmd
+            text: Health Inequalities
+          - href: 7_cardiovascular.qmd
+            text: Cardiovascular Disease
+          - href: 8_cancer.qmd
+            text: Cancer Pathways            
+      - section: "TEAM"
+        contents: 
+          - href: team.qmd
+   
 format:
   html:
-    comments:
-      hypothesis: false
+    theme: zephyr
     mermaid:
       theme: neutral
-  docx: default
-  pdf: default
 
 execute:
   freeze: true

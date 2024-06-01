@@ -1,0 +1,17 @@
+---
+title: "Programme Team" 
+lightbox: false
+---
+
+Prof. James Teo - **Clinical Director, CogStack CMO**
+
+Jawad Chaudhry - **Programme Manager**
+
+Dr. Joe Zhang - **Head of Data Science**
+
+Dr. Jorge Cardoso - **Chief Technology Officer, FLIP Lead**
+
+Sigal Hachlili - **Director of AI, Data, and Digital Innovation**
+
+
+

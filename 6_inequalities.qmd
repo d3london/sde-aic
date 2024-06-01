@@ -1,0 +1,24 @@
+---
+title: "Measurement of Group and Individual Health Inequalities" 
+lightbox: false
+---
+
+**AIM:** To systematically surface multiple dimensions of health inequality across sociodemographic / geospatial groups, and across individual patients, and to monitor this data continuously across key long-term conditions.
+
+**SUMMARY:** Health inequality refers to differences in health outcomes and determinants between individuals or groups (e.g. morbidity, co-morbidity, disease complications/death, healthcare access, disease screening, treatment delivery). The principle of health _equity_ emphasises the recognition and reduction of disparities in determinants, resulting in more equal outcomes.
+
+It is important to understand what groups suffer from health inequality. This is traditionally measured and visualised as a comparison of disease and outcome prevalence/incidence across different population groups. While helpful for broad insights, this also offers limited understanding of complex individual circumstances and determinants. This use-case proposes that measurement of inequalities can be extended to individual patients, by using clinical domain knowledge to define 'indicators' of unequal disease, diagnosis, and treatment pathways. In an individual with a long-term condition (LTC), example indicators of inequality are shown below. The contribution of individual indicators to later outcomes can also be measured in multivariate statistical models, and used to understand determinants for any given individual.
+
+|                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------- |
+| 1. LTC surfacing at an early age (@fig-onset-time)                                                                                 |
+| 2. LTC in proximity to relevant co-morbidities (e.g. cardiovascular risk factors)                                                      |
+| 3. Diagnosis at a _late_ age but with more severe disease (e.g. in Diabetes, measured by HbA1c or presence of end-organ complications) |
+| 4. Reduced health engagement/encounters/treatment compared to what is expected based on disease severity                               |
+| 5. Shorter time to complications and mortality following diagnosis                                                                     |
+
+The objective is to move beyond describing inequality, to understanding individual/small group determinants, and to increase actionability. At this level, determinants can be visualised for small specific groups, or individuals, with comparison to 'what is expected' in a background population.
+
+![Inequality in age of onset across demographic groups and deprivation, generated automatically through input of condition and group for stratification](media/onset_over_time.jpg){width=60%, #fig-onset-time}
+
+The initial stage of work will include defining shared terminologies, concepts, and indicators that cover LTC of interest. Secondly, existing descriptions of health inequality can be migrated onto the LDS environment, and extended such that any condition can be reproducibly visualised across multiple dimensions and 'cuts'. This foundation can be further extended to encompass specific inequality indicators and statistical insights, at a small group and individual level, and the use of these insights to identify patients at greatest risk of health inequality, or those with addressable determinants.
