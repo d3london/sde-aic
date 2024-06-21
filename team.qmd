@@ -19,7 +19,10 @@ Dr. Paul Wright - **Imaging Data Lead**
 
 Rokas Vistartas - **Lead Data Analyst (OMOP)**
 
+Prof. Seb Ourselin - **AI Centre Director**
+
 Sigal Hachlili - **Director of AI, Data, and Digital Innovation**
+
 
 ## Cogstack @ GSTT
 
@@ -27,6 +30,6 @@ Guy's and St. Thomas' is the HQ of the London AI Centre, and the home of CogStac
 
 Aleksandra Foy - **NLP Workstream Lead**
 
-Dr. Anthony Shek - **Lead NLP Engineer**
+Dr. Anthony Shek - **Lead NLP Engineer / OMOP Lead**
 
 Vitaliy Oliynyk - **Software Development Lead**

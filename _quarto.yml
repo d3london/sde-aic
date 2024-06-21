@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "London SDE / AIC Programme"
+  title: "London SDE/AIC Programme"
   navbar:
     background: secondary
   sidebar: 
@@ -34,9 +34,12 @@ website:
             text: Cardiovascular Disease
           - href: 8_cancer.qmd
             text: Cancer Pathways            
-      - section: "TEAM"
+      - section: "TEAM / TIMELINE"
         contents: 
           - href: team.qmd
+            text: SDE Team
+          - href: timeline.qmd
+            text: Timeline
    
 format:
   html:

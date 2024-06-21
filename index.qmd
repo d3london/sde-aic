@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the London AIC/SDE Programme" 
+title: "Introduction to the London SDE/AIC Programme" 
 lightbox: false
 ---
 
