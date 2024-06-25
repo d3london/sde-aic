@@ -1,17 +1,15 @@
 ---
-title: "SDE Programme Team" 
+title: "SDE Programme Core Team" 
 lightbox: false
 ---
 
-Prof. James Teo - **Clinical Director / CogStack CMO**
+Prof. James Teo - **Clinical Director**
 
 Jawad Chaudhry - **Programme Manager**
 
 Dr. Joe Zhang - **Head of Data Science**
 
 Dr. Jorge Cardoso - **Chief Technology Officer / FLIP Lead**
-
-Dr. Marc Modat - **Research Engineer (FLIP)**
 
 Mcanroe Fernandes - **Data Analyst**
 
@@ -22,14 +20,3 @@ Rokas Vistartas - **Lead Data Analyst (OMOP)**
 Prof. Seb Ourselin - **AI Centre Director**
 
 Sigal Hachlili - **Director of AI, Data, and Digital Innovation**
-
-
-## Cogstack @ GSTT
-
-Guy's and St. Thomas' is the HQ of the London AI Centre, and the home of CogStack.
-
-Aleksandra Foy - **NLP Workstream Lead**
-
-Dr. Anthony Shek - **Lead NLP Engineer / OMOP Lead**
-
-Vitaliy Oliynyk - **Software Development Lead**

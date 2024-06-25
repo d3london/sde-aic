@@ -2,7 +2,7 @@
   {
     "objectID": "timeline.html",
     "href": "timeline.html",
-    "title": "SDE Programme Timeline",
+    "title": "SDE/AIC Technology Delivery Roadmap",
     "section": "",
     "text": "gantt\n    title Updated June 2024\n    dateFormat YYYY-MM-DD\n    section FLIP\n        Technology installation: a1, 2024-04-01, 365d\n        Multi-modal data standardisation:a2, 2024-08-01, 280d\n        SDE integration / research collaborations: a3, 2025-04-01, 365d\n    section Cogstack/OMOP\n        Technology installation: b0, 2024-04-01, 216d\n        EHR data standardisation:b1, 2024-06-01, 365d\n        LDS integration:b2, 2025-02-01, 205d\n        Trust analytics stack:b3, 2024-10-01, 365d\n        SDE integration / research collaborations: b4, 2025-04-01, 365d\n    section Data/AI\n        Terminology/code standardisation:c1, 2024-06-01, 240d\n        Cohort building POC:c2, 2024-08-01, 200d\n        Health inequalities POC:c3, 2024-10-01, 220d\n        Cancer data linkage POC:c4, 2025-01-01, 220d         \n        Advanced analytics as service (including CVD):c5, 2025-04-01, 365d\n        In-Infrastructure (Snowflake / Azure) MLOps: c6, 2025-04-01, 365d",
     "crumbs": [
@@ -15,7 +15,7 @@
     "href": "index.html",
     "title": "Introduction to the London SDE/AIC Programme",
     "section": "",
-    "text": "Version 1.0 (last updated May 3 2024)\nThe London AI Centre (AIC) has been commissioned as part of the London Secure Data Environment (SDE) programme for its latest phase: to extend AI technologies, multi-modal data enrichment, and analytics capabilities to stakeholders and data environments across London. This document summarises the latest state of planning for the programme, as an aid to internal and external stakeholders including Integrated Care Boards (ICB), primary and secondary care providers, research partners, and for the wider NHS ecosystem.",
+    "text": "Version 1.0 (last updated June 25 2024)\nThe London AI Centre (AIC) has been commissioned as part of the London Secure Data Environment (SDE) programme for its latest phase: to extend AI technologies, multi-modal data enrichment, and analytics capabilities to stakeholders and data environments across London. This document summarises the latest state of planning for the programme, as an aid to internal and external stakeholders including Integrated Care Boards (ICB), primary and secondary care providers, research partners, and for the wider NHS ecosystem.",
     "crumbs": [
       "OVERVIEW",
       "Introduction"
@@ -178,20 +178,9 @@
   {
     "objectID": "team.html",
     "href": "team.html",
-    "title": "SDE Programme Team",
+    "title": "SDE Programme Core Team",
     "section": "",
-    "text": "Prof. James Teo - Clinical Director / CogStack CMO\nJawad Chaudhry - Programme Manager\nDr. Joe Zhang - Head of Data Science\nDr. Jorge Cardoso - Chief Technology Officer / FLIP Lead\nDr. Marc Modat - Research Engineer (FLIP)\nMcanroe Fernandes - Data Analyst\nDr. Paul Wright - Imaging Data Lead\nRokas Vistartas - Lead Data Analyst (OMOP)\nProf. Seb Ourselin - AI Centre Director\nSigal Hachlili - Director of AI, Data, and Digital Innovation",
-    "crumbs": [
-      "TEAM / TIMELINE",
-      "SDE Team"
-    ]
-  },
-  {
-    "objectID": "team.html#cogstack-gstt",
-    "href": "team.html#cogstack-gstt",
-    "title": "SDE Programme Team",
-    "section": "Cogstack @ GSTT",
-    "text": "Cogstack @ GSTT\nGuy’s and St. Thomas’ is the HQ of the London AI Centre, and the home of CogStack.\nAleksandra Foy - NLP Workstream Lead\nDr. Anthony Shek - Lead NLP Engineer / OMOP Lead\nVitaliy Oliynyk - Software Development Lead",
+    "text": "Prof. James Teo - Clinical Director\nJawad Chaudhry - Programme Manager\nDr. Joe Zhang - Head of Data Science\nDr. Jorge Cardoso - Chief Technology Officer / FLIP Lead\nMcanroe Fernandes - Data Analyst\nDr. Paul Wright - Imaging Data Lead\nRokas Vistartas - Lead Data Analyst (OMOP)\nProf. Seb Ourselin - AI Centre Director\nSigal Hachlili - Director of AI, Data, and Digital Innovation",
     "crumbs": [
       "TEAM / TIMELINE",
       "SDE Team"
