@@ -5,6 +5,7 @@ lightbox: false
 
 The following use-cases are _examples_ of analytics projects that can be supported within the SDE ecosystem, conducted in collaboration between ICB/NHS analytics teams and the AIC/SDE team. These population health use-cases align to the London Health Data Strategy and long term condition priorities, as well as national programmes such as CORE20PLUS5, and are proposed here following early discussions with London ICBs. An objective for any work is to build upwards from a foundation of reproducible pipelines, towards data science and predictive analytics (@fig-general-framework).
 
+
 ```{mermaid}
 %%| fig-width: 6
 %%| label: fig-general-framework
@@ -28,6 +29,12 @@ flowchart BT
 
     class A,B,C,D gray
 ```
+
+
+## Working with ICBs
+
+Within the new SDE infrastructure, Integrated Care Board (ICB) environments that are used for clinical / operational analytics and population health management, will share a common data model. As a result, any pipelines for cohort engineering or data science created in collaboration with one ICB, can be adapted and used for any other ICB (or deployed across multiple environments to create pan-London insights). This is vital to our work, which will including helping ICBs move towards the use of shared terminologies, and through the lifecycle of developing / validating / versioning / serving NHS-owned machine learning models across regions. As the SDE programme progresses, and depending on population health priorities, dedicated analysts within roving teams can help develop specific data science and AI applications.
+
 
 ## Research and Life Sciences
 

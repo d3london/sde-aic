@@ -1,28 +1,27 @@
 ---
-title: "SDE/AIC Technology Delivery Roadmap" 
+title: "SDE/AIC Delivery Roadmap" 
 lightbox: false
 ---
 
 ```{mermaid}
 %%| fig-width: 6
 gantt
-    title Updated June 2024
+    title Updated August 2024
     dateFormat YYYY-MM-DD
     section FLIP
         Technology installation: a1, 2024-04-01, 365d
-        Multi-modal data standardisation:a2, 2024-08-01, 280d
+        Multi-modal data standardisation:a2, 2024-08-01, 480d
         SDE integration / research collaborations: a3, 2025-04-01, 365d
     section Cogstack/OMOP
         Technology installation: b0, 2024-04-01, 216d
-        EHR data standardisation:b1, 2024-06-01, 365d
-        LDS integration:b2, 2025-02-01, 205d
-        Trust analytics stack:b3, 2024-10-01, 365d
+        EHR data standardisation:b1, 2024-06-01, 515d
+        Trust analytics stack:b3, 2024-10-01, 465d        
         SDE integration / research collaborations: b4, 2025-04-01, 365d
     section Data/AI
         Terminology/code standardisation:c1, 2024-06-01, 240d
         Cohort building POC:c2, 2024-08-01, 200d
         Health inequalities POC:c3, 2024-10-01, 220d
-        Cancer data linkage POC:c4, 2025-01-01, 220d         
-        Advanced analytics as service (including CVD):c5, 2025-04-01, 365d
-        In-Infrastructure (Snowflake / Azure) MLOps: c6, 2025-04-01, 365d
+        Cancer data POC:c4, 2025-01-01, 220d         
+        Advanced analytics as service POC (including CVD):c5, 2025-04-01, 365d
+        Building MLOps solutions: c6, 2025-04-01, 365d
 ```

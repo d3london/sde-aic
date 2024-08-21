@@ -5,7 +5,7 @@ lightbox: false
 
 CogStack is an AI Centre and NHS developed platform composed of a range of modular components, enabling deep search of entire hospital records, and use of advanced language AI to extract concepts found in unstructured data (free text records, letters, and summaries) (@fig-cogstack).
 
-![CogStack architecture](media/cogstack.jpg){width=40%, #fig-cogstack}
+![CogStack architecture](../media/cogstack.jpg){width=40%, #fig-cogstack}
 
 The platform as a whole includes the following:
 

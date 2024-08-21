@@ -1,0 +1,77 @@
+---
+title: "Overview of the London SDE" 
+lightbox: false
+---
+
+The London Secure Data Environment (SDE) is part of a [national research network](https://www.healthdatagateway.org/about/the-nhs-research-secure-data-environment-network) that will enable secure and more powerful analytics for NHS, academic, and commercial users. Uniquely amongst regional peers, the London SDE does not only focus on a single research platform. Rather, it emphasises the development of data infrastructure and capabilities across the entire region that can support population health and patient care pathways, as well as data environments to enable research and development partnerships.
+
+The SDE is led by [**OneLondon**](https://www.onelondon.online/), as part of the London Health Data Strategy, coalescing around three components :
+
+(1) **London Data Service (LDS)**: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data within secure analytics environments for both research and NHS users.
+
+(2) **DiscoverNOW Research/Analytics Environment**: run by Imperial College Healthcare Partners in North-West London, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and a unified pan-London analytics platform.
+
+(3) **London AI Centre (AIC)**: a national centre of excellence for applied data science and AI, the AIC provides frontier technology and expert teams that enable multi-modal real-world data, federated analytics and model training, and deployment and validation of machine learning tools.
+
+<img src="../media/sde_map.png" alt="London SDE Map" title="" height="400"/>
+
+
+## A network of data flows
+
+With the NHS increasingly under strain, it has never been more important to use data effectively - both as a resource for  analytical insights and decision support, but also as a valuable asset for research and therapeutics development. To achieve this, data must be accessed, curated, joined together, and made available in secure environments. This has always been difficult due to the silo-ed nature of NHS electronic systems. An objective of the London SDE is a Secure Data 'Ecosystem', whereby entire pathway data can be securely surfaced and flowed to trusted users where it is most needed (@fig-sde-summary). The infrastructure that enable these data flows, will also enable deployment of clinical analytics and machine learning tools to inform optimal pathway and operational decisions.
+
+```{mermaid}
+%%| fig-width: 6
+%%| label: fig-sde-summary
+%%| fig-cap: "Summary of London Secure Data Environment (SDE) components and data flows. Each London Integrated Care Board (ICB) is provisioned with its own data/analytics environment through the London Data Service (LDS). AIC = AI Centre; FLIP = Federated Learning and Interoperability Platform; OMOP CDM = Observational Medical Outcomes Partnership Common Data Model; DICOM = Digital Imaging and Communications in Medicine. London AI Centre components are in orange."
+flowchart TD
+
+    d1[GP Surgeries] ==>|Primary care data| LDS1[(London Data Service)]
+    d2[NHS England] ==>|Commissioning datasets| LDS1
+    d3[Local data sources] ==>|ICS data| ICB
+
+    LDS1==> AIC1a["CogStack in LDS"]
+    AIC1a==>|"Unstructured data 
+                (primary care)"| LDS1
+    LDS1 ==>|"Linked primary and
+            secondary care data"| NWL1[("DiscoverNOW Research & 
+                                Analytics Environment")]
+
+    AIC2["CogStack/OMOP CDM/DICOM
+         data lakes/FLIP in Hospitals"]-.->|"Multi-modal hospital 
+                                data via federation"|NWL1
+    AIC2 -.-> |"Hospital EHR data
+                via federation"| LDS1
+    LDS1 ==>|"Linked primary and
+            secondary care data"| ICB[("Integrated Care Board 'Sandpits' 
+                                x5: NEL/SEL/SWL/NWL/NCL")]
+
+    ICB <==>|"Analytics and machine 
+            learning collaboration"| AIC3[AIC Roving Teams]
+    ICB <==>|Output Sharing| LDS2["Terminologies, Code, 
+                                   Model Registries"]
+    AIC3 <==>|Output Sharing| LDS2
+    NWL1 <==>|Output Sharing| LDS2
+
+    classDef green fill:#ab9, stroke:#333, stroke-width:1px
+    classDef blue fill:#89c, stroke:#333, stroke-width:1px
+    classDef bluegreen fill:#9ca, stroke:#333, stroke-width:1px
+    classDef lightblue fill:#ace, stroke:#333, stroke-width:1px
+    classDef red fill:#c89, stroke:#333, stroke-width:1px
+    classDef lightorange fill:#ca8, stroke:#333, stroke-width:1px
+    classDef orange fill:#d96, stroke:#333, stroke-width:1px
+    classDef purple fill:#a9c, stroke:#333, stroke-width:1px
+    classDef bluegray fill:#9ab, stroke:#333, stroke-width:1px
+    classDef gray fill:#fff, stroke:#333, stroke-width:1px
+
+    class LDS1,LDS2 blue
+    class ICB lightblue
+    class AIC1,AIC1a,AIC2,AIC3 orange
+    class NWL1,NWL2 bluegray
+    class d1,d2,d3 bluegreen
+```
+
+## Patient and Public Engagement
+
+To support the SDE programme, OneLondon has engaged in a wide range of deliberative public engagement, including hosting the first ever [Citizen's Summit](https://www.onelondon.online/citizens-summit/) to deliberate expectations and complex issues around the use of health and care data. In addition, patient and public outreach for uses of data are conducted through Integrated Care Boards, by patient committees in the AI Centre [NHS Trusts](https://www.kch.nhs.uk/research/use-of-data-for-research/), and by [Discover-NOW](https://discover-now.co.uk/patients-and-public/). 
+

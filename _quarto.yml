@@ -6,26 +6,29 @@ website:
   title: "London SDE/AIC Programme"
   navbar:
     background: secondary
-  sidebar: 
-    style: "docked"
-    search: false
-    contents:
-      - section: "OVERVIEW"
-        contents: 
+#  sidebar: 
+#    style: "docked"
+#    search: false
+#    contents:
+    left:
+      - text: "OVERVIEW"
+        menu: 
           - href: index.qmd
             text: Introduction
-          - href: 1_objectives.qmd
+          - href: overview/0_sde.qmd
+            text: What is the London SDE?
+          - href: overview/1_objectives.qmd
             text: Objectives
-          - href: 2_waysofworking.qmd
-            text: Ways of Working
-      - section: "TECHNOLOGY"
-        contents: 
-          - href: 3_flip.qmd
-            text: Federated Analytics
-          - href: 4_cogstack.qmd
+          - href: overview/2_timeline.qmd
+            text: Delivery Roadmap            
+      - text: "TECHNOLOGY"
+        menu: 
+          - href: technology/3_flip.qmd
+            text: FLIP
+          - href: technology/4_cogstack.qmd
             text: CogStack                          
-      - section: "USE-CASES"
-        contents: 
+      - text: "POPULATION HEALTH"
+        menu: 
           - href: 5_introduction.qmd
             text: Summary
           - href: 6_inequalities.qmd
@@ -34,12 +37,10 @@ website:
             text: Cardiovascular Disease
           - href: 8_cancer.qmd
             text: Cancer Pathways            
-      - section: "TEAM / TIMELINE"
-        contents: 
-          - href: team.qmd
-            text: SDE Team
-          - href: timeline.qmd
-            text: Timeline
+      - text: "REAL-WORLD DATA"
+        menu: 
+          - href: 5_introduction.qmd
+            text: Summary
    
 format:
   html:
