@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-technology">    
         <li>
     <a class="dropdown-item" href="../technology/3_flip.html">
- <span class="dropdown-text">FLIP</span></a>
+ <span class="dropdown-text">Federated Platform</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../technology/4_cogstack.html">
@@ -237,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../technology/3_flip.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FLIP</span></a>
+ <span class="menu-text">Federation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -349,7 +349,7 @@ Figure&nbsp;1: GSTT Real-World Data Architecture
 </figure>
 </div>
 <ol type="1">
-<li><p>Connections to more than a dozen legacy electronic systems covering 20 years of hospital activity, and a live connection to the hospital Electronic Health Record, enable raw data to be ingested into a on premise database server. This includes diagnoses, attendances, laboratory tests, clinical observations, medication prescribing and dispensing, as well as data from specialty systems, for more than 5 million unique patients. Within the database, <a href="https://www.getdbt.com/product/what-is-dbt">dbt</a> is used to standardise the data into a common data model, and then into OMOP. An analytics cluster allows deployment of dashboards and applications for internal use.</p></li>
+<li><p>Connections to more than a dozen legacy electronic systems covering 20 years of hospital activity, and a live connection to the hospital Electronic Health Record, enable raw data to be ingested into a on-premise database server. This includes diagnoses, attendances, laboratory tests, clinical observations, medication prescribing and dispensing, as well as data from specialty systems, for more than 5 million unique patients. Within the database, <a href="https://www.getdbt.com/product/what-is-dbt">dbt</a> is used to standardise the data into a common data model, and then into OMOP. An analytics cluster allows deployment of dashboards and applications for internal use.</p></li>
 <li><p>Unstructured data from the live EHR and from 20 years of historical documents, letters, clinical notes, summaries, and test/radiology reports, is ingested into the CogStack server. Here, language AI models are trained and deployed to extract concepts with high precision into the structured data models.</p></li>
 <li><p>Standardised data is pushed into the secure FLIP enclave, where radiology metadata is used to pull DICOM from a live imaging data lake through <a href="https://www.xnat.org/">XNAT</a>, joined to the rest of the patient health record.</p></li>
 </ol>

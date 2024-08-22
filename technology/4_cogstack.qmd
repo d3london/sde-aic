@@ -8,6 +8,7 @@ CogStack is an NHS developed platform composed of a range of modular components,
 ![CogStack architecture](../media/cogstack.jpg){width=40%, #fig-cogstack}
 
 The Cogstack platform as a whole includes the following:
+
 - Data pipelines to centralise and lake clinical data including structured data i.e. observations, results, and unstructured data i.e. clinical narratives such as clinic letters, discharge and admission summaries and radiology reports also varying formats e.g. binary word docs, PDFs, images.
 - Data held in a database to enable search and visualisation of millions of distinct data points in near-real-time.
 - Language AI models process clinical text to standardised clinical terminologies (SNOMED-CT) to create interoperable clinical data. This allows discovery of patient phenotypes and characteristics that were previously only accessible by having humans read through millions of clinical notes.

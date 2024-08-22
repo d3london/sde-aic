@@ -23,7 +23,7 @@ website:
       - text: "TECHNOLOGY"
         menu: 
           - href: technology/3_flip.qmd
-            text: FLIP
+            text: Federated Platform
           - href: technology/4_cogstack.qmd
             text: CogStack                          
       - text: "POPULATION HEALTH"
@@ -60,7 +60,7 @@ website:
       - text: "TECHNOLOGY"
         contents: 
           - href: technology/3_flip.qmd
-            text: FLIP
+            text: Federation
           - href: technology/4_cogstack.qmd
             text: CogStack                          
       - text: "POPULATION HEALTH"
