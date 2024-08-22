@@ -3,6 +3,8 @@ title: "Measurement of Group and Individual Health Inequalities"
 lightbox: false
 ---
 
+_This is an **example** of an analytics project that can be conducted in collaboration between the AI Centre and ICBs on London SDE infrastructure_ 
+
 **AIM:** To systematically surface multiple dimensions of health inequality across sociodemographic / geospatial groups, and across individual patients, and to monitor this data continuously across key long-term conditions.
 
 **SUMMARY:** Health inequality refers to differences in health outcomes and determinants between individuals or groups (e.g. morbidity, co-morbidity, disease complications/death, healthcare access, disease screening, treatment delivery). The principle of health _equity_ emphasises the recognition and reduction of disparities in determinants, resulting in more equal outcomes.
@@ -19,6 +21,6 @@ It is important to understand what groups suffer from health inequality. This is
 
 The objective is to move beyond describing inequality, to understanding individual/small group determinants, and to increase actionability. At this level, determinants can be visualised for small specific groups, or individuals, with comparison to 'what is expected' in a background population.
 
-![Inequality in age of onset across demographic groups and deprivation, generated automatically through input of condition and group for stratification](media/onset_over_time.jpg){width=60%, #fig-onset-time}
+![Inequality in age of onset across demographic groups and deprivation, generated automatically through input of condition and group for stratification](../media/onset_over_time.jpg){width=60%, #fig-onset-time}
 
 The initial stage of work will include defining shared terminologies, concepts, and indicators that cover LTC of interest. Secondly, existing descriptions of health inequality can be migrated onto the LDS environment, and extended such that any condition can be reproducibly visualised across multiple dimensions and 'cuts'. This foundation can be further extended to encompass specific inequality indicators and statistical insights, at a small group and individual level, and the use of these insights to identify patients at greatest risk of health inequality, or those with addressable determinants.

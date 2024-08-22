@@ -3,11 +3,13 @@ title: "Introduction to the London AI Centre"
 lightbox: false
 ---
 
-The [London AI Centre](https://www.aicentre.co.uk/) (AIC) is a consortium of NHS and academic institutions led by Guy’s & St Thomas’ Hospitals, King’s College London, and King’s College Hospital, in partnership with 10 NHS Trusts and 4 universities across England. The centre hosts development and implementation of data platforms and AI technologies, aiming to achieve better outcomes for patients’ diagnosis and treatment, improve clinical and operational workflows, and drive innovation in research and life sciences.
+The [London AI Centre](https://www.aicentre.co.uk/) (AIC) is a consortium of NHS and academic institutions led by Guy’s & St Thomas’ Hospitals, King’s College London, and King’s College Hospital, in partnership with 10 NHS Trusts and 4 universities across England. The centre hosts development and implementation of data platforms and AI technologies, aiming to achieve better outcomes for patients’ diagnosis and treatment, improve clinical and operational workflows, and drive innovation in research and life sciences. This includes working within externally funded programmes through the NHS and academia, and with commercial partners.
 
-This includes working within externally funded programmes through the NHS and academia. The AIC has been commissioned as part of the [London Secure Data Environment](overview/0_sde.qmd) (SDE) programme for its latest phase: to extend multi-modal and real-world data enrichment, AI technologies, and analytics capabilities, to NHS partners and data environments across London. 
+## Building a Secure Data Environment
 
-This website summarises our objectives for the programme, as an aid to internal and external stakeholders including Integrated Care Boards (ICB), primary and secondary care providers, research partners, patients and public, and the wider NHS ecosystem.
+The AIC has been commissioned as part of the [London Secure Data Environment](overview/0_sde.qmd) (SDE) programme for its latest phase: to extend multi-modal and real-world data enrichment, AI technologies, and analytics capabilities, to NHS partners and data environments across London. 
+
+This website summarises AIC [objectives](overview/1_objectives.qmd) and on-going work for the programme, as an aid to internal and external stakeholders including Integrated Care Boards (ICB), primary and secondary care providers, research partners, patients and public, and the wider NHS ecosystem.
 
 <br/>
 

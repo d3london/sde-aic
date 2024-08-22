@@ -3,6 +3,8 @@ title: "Joining Up Cancer Pathways"
 lightbox: false
 ---
 
+_This is an **example** of an analytics project that can be conducted in collaboration between the AI Centre and ICBs on London SDE infrastructure_ 
+
 **AIM:** To link cancer pathways (including screening, diagnosis, staging, and outcomes) across primary care and secondary care. To identify areas of inequality in screening and late diagnosis, and to generate predictive insights for risk and screening recall.
 
 **SUMMARY:** Cancer has long been a challenging area for data-driven initiatives. Primary care coding of cancer is often incomplete, as the majority of care following referral takes place in hospitals. The most readily available secondary care data is from Commissioning Data Sets, which are only complete for inpatient care, and may not include the majority of cancer events. Within hospitals, the largest quantity of cancer data sits within audit datasets, or within unstructured text and clinic letters, which are not easily accessible.
@@ -14,7 +16,7 @@ The SDE programme provides opportunities to surface and link currently missing d
 ```{mermaid}
 %%| fig-width: 6
 %%| label: fig-cancer-data
-%%| fig-cap: "Summary of cancer data flows within the London SDE ecosystem."
+%%| fig-cap: "Summary of potential cancer data flows within the London SDE ecosystem."
 flowchart TD
     d1[GP Surgeries] ==>|"Primary care
                         coded cancer data"| LDS1[(London Data Service)]

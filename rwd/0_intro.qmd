@@ -1,0 +1,14 @@
+---
+title: "Building Better Access to Real-World Data" 
+lightbox: false
+---
+
+The London Secure Data Environment programme will also enable wider research capabilities in precision medicine and life sciences, by providing secure access to Real-World Data. This type of data is routinely generated during clinical care, and can be used to improve our understanding of disease, outcomes, and treatments.
+
+Most data used for research in the NHS is held in large population databases such as the Clinical Practice Research Datalink (CPRD), or accessed through the national federated analytics platform OpenSAFELY. These can support population studies with linked primary care and administrative hospital data that records patient encounters and lists of diagnoses.  National platforms such as [NHS DigiTrials](https://digital.nhs.uk/services/nhs-digitrials) are able to use such data to support research and clinical trials at a national scale.
+
+## Deep data is missing
+
+However, much of the most valuable data remains in raw form, locked behind hospital systems. This includes data for test results and observations in hospitals, as well as records of specialised tests and disease subtypes which are often found in documents. Much information is also captured in different modalities such as imaging. London AI Centre technologies are enabling access to far deeper pools of health data, including full visibility over EHR data, multi-modal data, and biomarkers extracted from documents and reports. This means that patients can be represented in far greater detail, opening the door to a new generation of precision medicine research.
+
+Ultimately, developing such capabilities within the NHS ensures that value from research and discoveries can pass back directly to NHS care providers and patients.              

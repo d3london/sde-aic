@@ -5,7 +5,7 @@ lightbox: false
 
 The London Secure Data Environment (SDE) is part of a [national research network](https://www.healthdatagateway.org/about/the-nhs-research-secure-data-environment-network) that will enable secure and more powerful analytics for NHS, academic, and commercial users. Uniquely amongst regional peers, the London SDE does not only focus on a single research platform. Rather, it emphasises the development of data infrastructure and capabilities across the entire region that can support population health and patient care pathways, as well as data environments to enable research and development partnerships.
 
-The SDE is led by [**OneLondon**](https://www.onelondon.online/), as part of the London Health Data Strategy, coalescing around three components :
+The SDE is led by [OneLondon](https://www.onelondon.online/), as part of the London Health Data Strategy, coalescing around three components (@fig-sde-map):
 
 (1) **London Data Service (LDS)**: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data within secure analytics environments for both research and NHS users.
 
@@ -13,12 +13,11 @@ The SDE is led by [**OneLondon**](https://www.onelondon.online/), as part of the
 
 (3) **London AI Centre (AIC)**: a national centre of excellence for applied data science and AI, the AIC provides frontier technology and expert teams that enable multi-modal real-world data, federated analytics and model training, and deployment and validation of machine learning tools.
 
-<img src="../media/sde_map.png" alt="London SDE Map" title="" height="400"/>
-
+![London SDE Map](../media/sde_map.png){width=60%, #fig-sde-map}
 
 ## A network of data flows
 
-With the NHS increasingly under strain, it has never been more important to use data effectively - both as a resource for  analytical insights and decision support, but also as a valuable asset for research and therapeutics development. To achieve this, data must be accessed, curated, joined together, and made available in secure environments. This has always been difficult due to the silo-ed nature of NHS electronic systems. An objective of the London SDE is a Secure Data 'Ecosystem', whereby entire pathway data can be securely surfaced and flowed to trusted users where it is most needed (@fig-sde-summary). The infrastructure that enable these data flows, will also enable deployment of clinical analytics and machine learning tools to inform optimal pathway and operational decisions.
+With the NHS under increasing strain, it has never been more important to use patient data effectively - as a resource for improving clinical and operational decision-making, but also as a valuable asset for research and therapeutics development. To achieve this, data must be extracted, curated, joined together, and made available for secure access. This has always been difficult due to the silo-ed nature of NHS electronic systems. Our objective is to break down these barriers to allow entire pathway data to be securely surfaced and flowed to trusted users (@fig-sde-summary). The infrastructure that enable these data flows, will also enable deployment of clinical analytics and machine learning tools to inform pathway and operational decisions.
 
 ```{mermaid}
 %%| fig-width: 6
