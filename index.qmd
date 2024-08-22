@@ -1,78 +1,18 @@
 ---
-title: "Introduction to the London SDE/AIC Programme" 
+title: "Introduction to the London AI Centre" 
 lightbox: false
 ---
 
-_Version 1.0 (last updated June 25 2024)_
+The [London AI Centre](https://www.aicentre.co.uk/) (AIC) is a consortium of NHS and academic institutions led by Guy’s & St Thomas’ Hospitals, King’s College London, and King’s College Hospital, in partnership with 10 NHS Trusts and 4 universities across England. The centre hosts development and implementation of data platforms and AI technologies, aiming to achieve better outcomes for patients’ diagnosis and treatment, improve clinical and operational workflows, and drive innovation in research and life sciences. This includes working within externally funded programmes through the NHS and academia, and with commercial partners.
 
-The [London AI Centre](https://www.aicentre.co.uk/) (AIC) has been commissioned as part of the London Secure Data Environment (SDE) programme for its latest phase: to extend AI technologies, multi-modal data enrichment, and analytics capabilities to stakeholders and data environments across London. This document summarises the latest state of planning for the programme, as an aid to internal and external stakeholders including Integrated Care Boards (ICB), primary and secondary care providers, research partners, and for the wider NHS ecosystem.
+## Building a Secure Data Environment
 
-## What is the London AI Centre?
+The AIC has been commissioned as part of the [London Secure Data Environment](overview/0_sde.qmd) (SDE) programme for its latest phase: to extend multi-modal and real-world data enrichment, AI technologies, and analytics capabilities, to NHS partners and data environments across London. 
 
-The London Artificial Intelligence Centre for Value-Based Healthcare (London AI Centre) is a consortium of NHS and academic institutions led by Guy’s & St Thomas’ Hospitals, King’s College London, and King’s College Hospital, in partnership with 10 NHS Trusts and 4 universities across England. The centre hosts development and implementation of data platforms and AI technologies, aiming to achieve better outcomes for patients’ diagnosis and treatment, improve clinical and operational workflows, and drive innovative healthcare research. This includes working within externally funded programmes through the NHS and academia, such as the London SDE. 
+This website summarises AIC [objectives](overview/1_objectives.qmd) and on-going work for the programme, as an aid to internal and external stakeholders including Integrated Care Boards (ICB), primary and secondary care providers, research partners, patients and public, and the wider NHS ecosystem.
 
-## What is the London SDE?
+<br/>
 
-The London Secure Data Environment (SDE) is part of a national programme to enable secure and more powerful analytics for NHS, academic, and commercial users. Uniquely amongst regional peers, the London SDE does not focus on a single research platform. Rather, it places a focus on developing data infrastructure and capabilities across the region to support population health, care providers, and commissioners. This is in addition to building data environments that enable commercial research and development partnerships.
-
-The SDE is led by **OneLondon**, as part of an overarching London Health Data Strategy, coalescing around three components (@fig-sde-summary):
-
-(1) **London Data Service (LDS)**: hosted in North-East London, the LDS serves as a data engineering and service layer for pan-London primary care and secondary care data. It handles data extraction and linkage, and provisions data within secure analytics environments for both research and NHS users.
-
-(2) **DiscoverNOW Research/Analytics Environment**: run by Imperial College Healthcare Partners in North-West London, DiscoverNOW supports governance and operation of secure research environments for academic, commercial, and NHS research and analytics.
-
-(3) **London AI Centre (AIC)**: a national centre of excellence for applied data science and AI, the AIC provides frontier technology for data enrichment (CogStack), federated analytics (FLIP), and deployment of machine learning tools, as well as expertise in health data and advanced analytics.
-
-
-```{mermaid}
-%%| fig-width: 6
-%%| label: fig-sde-summary
-%%| fig-cap: "Summary of SDE components and data flows. Each London ICB is provisioned with its own data/analytics environment through the LDS. FLIP = Federated Learning and Interoperability Platform."
-flowchart TD
-    d1[GP Surgeries] ==>|Primary care data| LDS1[(London Data Service)]
-    d2[NHS Digital] ==>|Commissioning datasets| LDS1
-    d3[Local data sources] ==>|ICS data| ICB
-    AIC1["CogStack in Trusts"] ==>|"Unstructured data 
-                                          (hospitals)
-                                          via federation"| LDS1
-    LDS1==> AIC1a["CogStack in LDS"]
-    AIC1a==>|"Unstructured data 
-                (primary care)"| LDS1
-    LDS1 ==>|Linked data| NWL1[("DiscoverNOW Research & 
-                                Analytics Environment")]
-
-    AIC2["AIC FLIP"] ==> |"Multi-modal data 
-                                          (imaging metadata)
-                                          via federation"| NWL1
-    AIC2 ==> |"Hospital cancer data
-                via federation"| LDS1
-    LDS1 ==>|Linked data| ICB[("Integrated Care Board 'Sandpits' 
-                                x5: NEL/SEL/SWL/NWL/NCL")]
-
-    ICB <==>|Collaborative analytics| AIC3[AIC Data/AI Hub]
-    ICB <==>|Output Sharing| LDS2[Terminology/Code/Model Servers]
-    AIC3 <==>|Output Sharing| LDS2
-    NWL1 <==>|Output Sharing| LDS2
-
-    classDef green fill:#ab9, stroke:#333, stroke-width:1px
-    classDef blue fill:#89c, stroke:#333, stroke-width:1px
-    classDef bluegreen fill:#9ca, stroke:#333, stroke-width:1px
-    classDef lightblue fill:#ace, stroke:#333, stroke-width:1px
-    classDef red fill:#c89, stroke:#333, stroke-width:1px
-    classDef lightorange fill:#ca8, stroke:#333, stroke-width:1px
-    classDef orange fill:#d96, stroke:#333, stroke-width:1px
-    classDef purple fill:#a9c, stroke:#333, stroke-width:1px
-    classDef bluegray fill:#9ab, stroke:#333, stroke-width:1px
-    classDef gray fill:#fff, stroke:#333, stroke-width:1px
-
-    class LDS1,LDS2 blue
-    class ICB lightblue
-    class AIC1,AIC1a,AIC2,AIC3 orange
-    class NWL1,NWL2 bluegray
-    class d1,d2,d3 bluegreen
-```
-
-## Patient and Public Engagement
-
-To support the SDE programme, OneLondon has engaged in a wide range of deliberative public engagement, including hosting the first ever [Citizen's Summit](https://www.onelondon.online/citizens-summit/) to deliberate expectations and complex issues around the use of health and care data. In addition, patient and public outreach for uses of data are conducted through Integrated Care Boards, by patient committees in the AI Centre [NHS Trusts](https://www.kch.nhs.uk/research/use-of-data-for-research/), and by [Discover-NOW](https://discover-now.co.uk/patients-and-public/). 
-
+<img src="media/logos/sde_logo.png" alt="London SDE" title="" height="60" />
+<img src="media/logos/logo_aic.png" alt="London AI Centre" title="" height="60" />
+<img src="media/logos/onelondon.png" alt="London AI Centre" title="OneLondon" height="45" />

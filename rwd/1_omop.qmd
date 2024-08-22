@@ -1,0 +1,22 @@
+---
+title: "Hospital Data Standardisation" 
+lightbox: false
+---
+
+With vast amounts of data locked away in hospital electronic records systems and unstructured documents, a substantial amount of work is required to surface this data and standardise it. The London AI Centre is working across hospital Trusts to perform data engineering by connecting to source systems, curating the data and loading it into powerful and secure on-premise infrastructure, and producing OMOP datasets for particular research questions. This includes data that is extracted using CogStack from unstructured documents. Data is joined to imaging data for multi-modal analyses. Finally, data can be loaded into each Trust's Federated Learning and Interoperability Platform environment to enable joined up analyses with other sites.  
+
+## Guy's and St. Thomas' Hospital (GSTT)
+
+GSTT is one of the 'home' Trusts for the AI Centre (@fig-gstt-arch), and is used here to illustrate the type of work that is being conducted:
+
+![GSTT Real-World Data Architecture](../media/gstt_arch.png){width=50%, #fig-gstt-arch}
+
+1. Connections to more than a dozen legacy electronic systems covering 20 years of hospital activity, and a live connection to the hospital Electronic Health Record, enable raw data to be ingested into a on-premise database server. This includes diagnoses, attendances, laboratory tests, clinical observations, medication prescribing and dispensing, as well as data from specialty systems, for more than 5 million unique patients. Within the database, [dbt](https://www.getdbt.com/product/what-is-dbt) is used to standardise the data into a common data model, and then into OMOP. An analytics cluster allows deployment of dashboards and applications for internal use. 
+
+2. Unstructured data from the live EHR and from 20 years of historical documents, letters, clinical notes, summaries, and test/radiology reports, is ingested into the CogStack server. Here, language AI models are trained and deployed to extract concepts with high precision into the structured data models. 
+
+3. Standardised data is pushed into the secure FLIP enclave, where radiology metadata is used to pull DICOM from a live imaging data lake through [XNAT](https://www.xnat.org/), joined to the rest of the patient health record. 
+
+## Building horizontally
+
+Over the past years, the AI Centre has installed infrastructure across multiple NHS Trusts in London and the wider region. Over the course of the program, the 'data stack' built here can be put in place in other partner Trusts. NHS Trusts remain in full control of their own data, while FLIP can be used to federate querying, analytics, and machine learning, across multiple sites.

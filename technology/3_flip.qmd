@@ -1,0 +1,16 @@
+---
+title: "Federated Learning and Interoperability Platform" 
+lightbox: false
+---
+
+A major output of technology development within the London AI Centre has been the Federated Learning and Interoperability Platform (FLIP). This provides an interoperable secure data environment within each hospital’s firewall, a mechanism to query and analyse data across these environments ('Interoperability'), and a mechanism to train AI models ('Federated Learning') without the need to transfer or centralise data. 
+
+![FLIP architecture overview](../media/flip_main.jpg){width=60%, #fig-flip-summary}
+
+To populate in-hospital environments, data is loaded from multiple sources (@fig-flip-summary). These include electronic patient records systems (observations, diagnosis, medicines, etc) and data extracted from reports and narrative text through language AI systems (CogStack). These are transformed into OMOP. Information is also extracted from medical image stores within hospital Picture Archiving and Communications Systems (PACS), with additional capabilities for loading other imaging modalities and digital pathology. Imaging metadata is loaded into the OMOP radiology extension, enabling querying and selection of multi-modal data items. 
+
+Each hospital hosts its own FLIP infrastructure, which includes Graphical Processing Unit compute (@fig-flip-compute) in an NVidia DGX-1 (8 x Nvidia A100). Processing is performed locally, eliminating the need to transfer vast quantities of imaging 'big data'.
+
+![AIC on site infrastructure, currently installed in 7 NHS Trusts](../media/flip_compute.jpg){width=40%, #fig-flip-compute}
+
+From a remote location, users are able to cross query information from multiple secondary care sites, perform analytics, and train AI models in a federated manner before bringing in model weights centrally.

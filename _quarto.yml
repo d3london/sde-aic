@@ -3,44 +3,83 @@ project:
   output-dir: docs
 
 website:
-  title: "London SDE/AIC Programme"
+  title: "London SDE/AIC"
+  page-navigation: true  
   navbar:
+    logo: media/logos/logo_aic.png
     background: secondary
-  sidebar: 
-    style: "docked"
     search: false
+    left:
+      - text: "OVERVIEW"
+        menu: 
+          - href: index.qmd
+            text: Introduction
+          - href: overview/0_sde.qmd
+            text: What is the London SDE?
+          - href: overview/1_objectives.qmd
+            text: Objectives
+          - href: overview/2_timeline.qmd
+            text: Delivery Roadmap            
+      - text: "TECHNOLOGY"
+        menu: 
+          - href: technology/3_flip.qmd
+            text: Federated Platform
+          - href: technology/4_cogstack.qmd
+            text: CogStack                          
+      - text: "POPULATION HEALTH"
+        menu: 
+          - href: pophealth/5_phmsummary.qmd
+            text: Developing Use-Cases
+          - href: pophealth/6_inequalities.qmd
+            text: Health Inequalities
+          - href: pophealth/7_cardiovascular.qmd
+            text: Cardiovascular Disease
+          - href: pophealth/8_cancer.qmd
+            text: Cancer Pathways            
+      - text: "REAL-WORLD DATA"
+        menu: 
+          - href: rwd/0_intro.qmd
+            text: Building Better RWD
+          - href: rwd/1_omop.qmd
+            text: Hospital Data Standardisation
+
+  sidebar:
+    search: false
+    style: docked
     contents:
-      - section: "OVERVIEW"
+      - text: "OVERVIEW"
         contents: 
           - href: index.qmd
             text: Introduction
-          - href: 1_objectives.qmd
+          - href: overview/0_sde.qmd
+            text: London SDE
+          - href: overview/1_objectives.qmd
             text: Objectives
-          - href: 2_waysofworking.qmd
-            text: Ways of Working
-      - section: "TECHNOLOGY"
+          - href: overview/2_timeline.qmd
+            text: Roadmap            
+      - text: "TECHNOLOGY"
         contents: 
-          - href: 3_flip.qmd
-            text: Federated Analytics
-          - href: 4_cogstack.qmd
+          - href: technology/3_flip.qmd
+            text: Federation
+          - href: technology/4_cogstack.qmd
             text: CogStack                          
-      - section: "USE-CASES"
+      - text: "POPULATION HEALTH"
         contents: 
-          - href: 5_introduction.qmd
-            text: Summary
-          - href: 6_inequalities.qmd
+          - href: pophealth/5_phmsummary.qmd
+            text: Use-Cases
+          - href: pophealth/6_inequalities.qmd
             text: Health Inequalities
-          - href: 7_cardiovascular.qmd
-            text: Cardiovascular Disease
-          - href: 8_cancer.qmd
-            text: Cancer Pathways            
-      - section: "TEAM / TIMELINE"
+          - href: pophealth/7_cardiovascular.qmd
+            text: Cardiovascular Risk
+          - href: pophealth/8_cancer.qmd
+            text: Cancer Pathways             
+      - text: "REAL-WORLD DATA"
         contents: 
-          - href: team.qmd
-            text: SDE Team
-          - href: timeline.qmd
-            text: Timeline
-   
+          - href: rwd/0_intro.qmd
+            text: Building RWD
+          - href: rwd/1_omop.qmd
+            text: Hospital Data            
+
 format:
   html:
     theme: zephyr
