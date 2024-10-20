@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://d3london.github.io/sde-aic/overview/2_timeline.html</loc>
-    <lastmod>2024-09-23T09:12:53.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://d3london.github.io/sde-aic/overview/0_sde.html</loc>
-    <lastmod>2024-09-23T09:12:53.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://d3london.github.io/sde-aic/technology/4_cogstack.html</loc>
-    <lastmod>2024-09-23T09:12:53.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://d3london.github.io/sde-aic/rwd/1_omop.html</loc>
-    <lastmod>2024-09-23T09:12:53.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://d3london.github.io/sde-aic/pophealth/8_cancer.html</loc>
-    <lastmod>2024-09-23T09:12:53.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://d3london.github.io/sde-aic/pophealth/5_phmsummary.html</loc>
-    <lastmod>2024-09-23T09:12:53.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://d3london.github.io/sde-aic/pophealth/7_cardiovascular.html</loc>
-    <lastmod>2024-09-23T09:12:53.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://d3london.github.io/sde-aic/pophealth/6_inequalities.html</loc>
-    <lastmod>2024-09-23T09:12:53.917Z</lastmod>
+    <loc>https://d3london.github.io/sde-aic/technology/3_flip.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
   </url>
   <url>
     <loc>https://d3london.github.io/sde-aic/index.html</loc>
-    <lastmod>2024-09-23T09:12:53.897Z</lastmod>
+    <lastmod>2024-10-20T15:46:41.034Z</lastmod>
   </url>
   <url>
-    <loc>https://d3london.github.io/sde-aic/rwd/0_intro.html</loc>
-    <lastmod>2024-09-23T09:12:53.918Z</lastmod>
+    <loc>https://d3london.github.io/sde-aic/pophealth/8_cancer.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
   </url>
   <url>
-    <loc>https://d3london.github.io/sde-aic/technology/3_flip.html</loc>
-    <lastmod>2024-09-23T09:12:53.918Z</lastmod>
+    <loc>https://d3london.github.io/sde-aic/pophealth/7_cardiovascular.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://d3london.github.io/sde-aic/rwd/1_omop.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://d3london.github.io/sde-aic/overview/0_sde.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
   </url>
   <url>
     <loc>https://d3london.github.io/sde-aic/overview/1_objectives.html</loc>
-    <lastmod>2024-09-23T09:12:53.917Z</lastmod>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://d3london.github.io/sde-aic/overview/2_timeline.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://d3london.github.io/sde-aic/rwd/0_intro.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://d3london.github.io/sde-aic/pophealth/6_inequalities.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://d3london.github.io/sde-aic/pophealth/5_phmsummary.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://d3london.github.io/sde-aic/technology/4_cogstack.html</loc>
+    <lastmod>2024-10-20T15:46:41.054Z</lastmod>
   </url>
 </urlset>
